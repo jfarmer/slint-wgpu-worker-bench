@@ -1,0 +1,108 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(VULKAN)",
+    "effective_and_enabled": "Backends(VULKAN)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(VULKAN)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "vulkan",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 39.843,
+      "class": "surface-creation-failed",
+      "context": "post-abandon",
+      "message": "Error creating wgpu window surface: Failed to create surface for any enabled backend: {}",
+      "phase": "surface"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 2.245,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 2.249,
+      "detail": {
+        "reason": "ordinary has no worker"
+      },
+      "name": "abandon_not_applicable"
+    }
+  ],
+  "finished_ms": 40.268,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "after-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 2.044,
+      "end_ms": 2.234,
+      "name": "event_loop",
+      "start_ms": 0.19,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 29.922,
+      "end_ms": 32.184,
+      "name": "window",
+      "start_ms": 2.263,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 7.561,
+      "end_ms": 39.761,
+      "name": "instance",
+      "start_ms": 32.2,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.027,
+      "end_ms": 39.795,
+      "name": "surface",
+      "start_ms": 39.768,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "abandon",
+  "status": "completed",
+  "strategy": "ordinary",
+  "wgpu": "30.0.1",
+  "windows": []
+}

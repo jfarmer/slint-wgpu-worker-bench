@@ -1,0 +1,4 @@
+  28 exit-during-delay destroyed_line=0 exit_code=0
+  18 exit-during-preparation destroyed_line=0 exit_code=0
+ 152 finished-before-release destroyed_line=0 exit_code=0
+   2 finished-before-release destroyed_line=1 exit_code=0

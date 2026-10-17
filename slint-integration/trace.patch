@@ -1,0 +1,41 @@
+--- a/internal/backends/winit/wgpu_device.rs	2026-09-28 09:37:13.936612986 -0400
++++ b/internal/backends/winit/wgpu_device.rs	2026-09-28 09:37:13.997347151 -0400
+@@ -24,6 +24,7 @@
+             requested_api,
+             std::env::var_os("WGPU_ADAPTER_NAME").is_some(),
+         ) {
++            eprintln!("slint-wgpu-trace: declined configuration");
+             return Self::default();
+         }
+         let backends = wgpu_30::mask_backends(
+@@ -34,11 +35,15 @@
+             backends & wgpu::Instance::enabled_backend_features(),
+             wgpu::InstanceFlags::from_build_config().with_env(),
+         ) {
++            eprintln!("slint-wgpu-trace: declined backends={backends:?} flags={:?}", wgpu::InstanceFlags::from_build_config().with_env());
+             return Self::default();
+         }
++        eprintln!("slint-wgpu-trace: worker spawned backends={backends:?}");
+         Self::from_spawn_result(std::thread::Builder::new().name("slint-wgpu-device".into()).spawn(
+             move || {
+-                with_autorelease_pool(|| wgpu_30::prepare_default_device_without_surface(backends))
++                let result = with_autorelease_pool(|| wgpu_30::prepare_default_device_without_surface(backends));
++                eprintln!("slint-wgpu-trace: worker finished thread={:?} ok={} adapter={:?}", std::thread::current().name(), result.is_ok(), result.as_ref().ok().map(|c| match c { WGPUConfiguration::Manual { adapter, .. } => adapter.get_info().name, _ => String::new() }));
++                result
+             },
+         ))
+     }
+@@ -50,11 +55,12 @@
+     pub fn take(&self) -> Option<DeviceResult> {
+         self.task
+             .take()
+-            .map(|task| task.join().unwrap_or_else(|panic| std::panic::resume_unwind(panic)))
++            .map(|task| { eprintln!("slint-wgpu-trace: consumed"); task.join().unwrap_or_else(|panic| std::panic::resume_unwind(panic)) })
+     }
+ 
+     pub fn discard(&self) {
+         if let Some(task) = self.task.take() {
++            eprintln!("slint-wgpu-trace: discarded");
+             // GPU resources returned by an abandoned worker also need an autorelease pool.
+             with_autorelease_pool(|| {
+                 let _ = task.join();

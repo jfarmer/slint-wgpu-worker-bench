@@ -1,0 +1,82 @@
+{
+  "started": "2026-09-28T09:47:11-0700",
+  "argv": [
+    "scripts\\run-matrix.py",
+    "--out",
+    "runs\\hz-dx12-control",
+    "--suite",
+    "control",
+    "--env",
+    "WGPU_BACKEND=dx12",
+    "--env",
+    "WGPU_VALIDATION=0"
+  ],
+  "env_overrides": {
+    "WGPU_BACKEND": "dx12",
+    "WGPU_VALIDATION": "0"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26100",
+    "machine": "ARM64",
+    "python": "3.12.10"
+  },
+  "harness_commit": "cbb9b2a7222c3108332fc1a53cb8599f6f9179c7",
+  "harness_dirty": false,
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+  "binary": "target\\release\\slint-wgpu-worker-bench.exe",
+  "profile": "release",
+  "timeout_s": 60,
+  "cases": [
+    {
+      "case": "ordinary__control-late-debug-layer",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.5
+    },
+    {
+      "case": "ordinary__control-late-debug-layer-first-device",
+      "exit_code": 5,
+      "exit": "panic",
+      "wall_s": 1.141
+    },
+    {
+      "case": "worker-device__control-late-debug-layer",
+      "exit_code": 5,
+      "exit": "panic",
+      "wall_s": 0.297
+    },
+    {
+      "case": "worker-device__control-late-debug-layer-first-device",
+      "exit_code": 5,
+      "exit": "panic",
+      "wall_s": 0.297
+    },
+    {
+      "case": "worker-instance__control-late-debug-layer",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.484
+    },
+    {
+      "case": "worker-instance__control-late-debug-layer-first-device",
+      "exit_code": 5,
+      "exit": "panic",
+      "wall_s": 0.344
+    },
+    {
+      "case": "worker-after-select__control-late-debug-layer",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.406
+    },
+    {
+      "case": "worker-after-select__control-late-debug-layer-first-device",
+      "exit_code": 5,
+      "exit": "panic",
+      "wall_s": 0.281
+    }
+  ]
+}

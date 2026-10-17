@@ -1,0 +1,116 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(GL)",
+    "effective_and_enabled": "Backends(GL)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(GL)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "gl",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 38.855,
+      "class": "adapter-not-found",
+      "context": "post-abandon",
+      "message": "Failed to find an appropriate adapter: No suitable graphics adapter found; noop not requested, vulkan not requested, metal not requested, dx12 not requested, gl found no adapters, webgpu not requested",
+      "phase": "adapter"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 2.236,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 2.24,
+      "detail": {
+        "reason": "ordinary has no worker"
+      },
+      "name": "abandon_not_applicable"
+    }
+  ],
+  "finished_ms": 39.751,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 2.03,
+      "end_ms": 2.222,
+      "name": "event_loop",
+      "start_ms": 0.192,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 31.509,
+      "end_ms": 33.774,
+      "name": "window",
+      "start_ms": 2.266,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 4.787,
+      "end_ms": 38.576,
+      "name": "instance",
+      "start_ms": 33.789,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.048,
+      "end_ms": 38.633,
+      "name": "surface",
+      "start_ms": 38.585,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.159,
+      "end_ms": 38.799,
+      "name": "adapter",
+      "start_ms": 38.64,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "abandon",
+  "status": "completed",
+  "strategy": "ordinary",
+  "wgpu": "30.0.1",
+  "windows": []
+}

@@ -1,0 +1,2240 @@
+{
+  "ok": false,
+  "result": "fail",
+  "sanity": [
+    {
+      "strategy": "ordinary",
+      "variant": "abandon-after-device",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "abandon-before-adapter",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "abandon-before-device",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "failure-empty-mask",
+      "ok": false,
+      "problems": [
+        "status is 'watchdog-timeout'",
+        "timeout in /watchdog: timed out after 60s during main/event_loop on main"
+      ]
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "failure-limits",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "failure-unsupported-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "multi-window",
+      "ok": false,
+      "problems": [
+        "seq0: surface configure was rejected, nothing was presented",
+        "seq1: surface configure was rejected, nothing was presented",
+        "sim0: surface configure was rejected, nothing was presented",
+        "sim1: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "repeated",
+      "ok": false,
+      "problems": [
+        "r0: surface configure was rejected, nothing was presented",
+        "r1: surface configure was rejected, nothing was presented",
+        "r2: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "single",
+      "ok": false,
+      "problems": [
+        "w0: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "abandon-after-device",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "abandon-before-adapter",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "abandon-before-device",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "failure-empty-mask",
+      "ok": false,
+      "problems": [
+        "status is 'watchdog-timeout'",
+        "timeout in /watchdog: timed out after 60s during main/event_loop on main"
+      ]
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "failure-limits",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "failure-unsupported-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "multi-window",
+      "ok": false,
+      "problems": [
+        "seq0: surface configure was rejected, nothing was presented",
+        "seq1: surface configure was rejected, nothing was presented",
+        "sim0: surface configure was rejected, nothing was presented",
+        "sim1: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "repeated",
+      "ok": false,
+      "problems": [
+        "r0: surface configure was rejected, nothing was presented",
+        "r1: surface configure was rejected, nothing was presented",
+        "r2: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "single",
+      "ok": false,
+      "problems": [
+        "w0: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "abandon-after-device",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "abandon-before-adapter",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "abandon-before-device",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "failure-empty-mask",
+      "ok": false,
+      "problems": [
+        "status is 'watchdog-timeout'",
+        "timeout in /watchdog: timed out after 60s during main/event_loop on main"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "failure-limits",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "failure-unsupported-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "multi-window",
+      "ok": false,
+      "problems": [
+        "seq0: surface configure was rejected, nothing was presented",
+        "seq1: surface configure was rejected, nothing was presented",
+        "sim0: surface configure was rejected, nothing was presented",
+        "sim1: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "repeated",
+      "ok": false,
+      "problems": [
+        "r0: surface configure was rejected, nothing was presented",
+        "r1: surface configure was rejected, nothing was presented",
+        "r2: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "single",
+      "ok": false,
+      "problems": [
+        "w0: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "abandon-after-device",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "abandon-before-adapter",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "abandon-before-device",
+      "ok": false,
+      "problems": [
+        "post-abandon: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "failure-empty-mask",
+      "ok": false,
+      "problems": [
+        "status is 'watchdog-timeout'",
+        "timeout in /watchdog: timed out after 60s during main/event_loop on main"
+      ]
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "failure-limits",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "failure-unsupported-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "multi-window",
+      "ok": false,
+      "problems": [
+        "seq0: surface configure was rejected, nothing was presented",
+        "seq1: surface configure was rejected, nothing was presented",
+        "sim0: surface configure was rejected, nothing was presented",
+        "sim1: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "repeated",
+      "ok": false,
+      "problems": [
+        "r0: surface configure was rejected, nothing was presented",
+        "r1: surface configure was rejected, nothing was presented",
+        "r2: surface configure was rejected, nothing was presented"
+      ]
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "single",
+      "ok": false,
+      "problems": [
+        "w0: surface configure was rejected, nothing was presented"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "variant": "abandon-after-device",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-device": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-device": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-device": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-device": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-device": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-device": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-after-device",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-instance": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-instance": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-instance": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-instance": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-instance": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-instance": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-after-device",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-after-select": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-after-select": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-after-select": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-after-select": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-after-select": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-after-select": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-adapter",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-device": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-device": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-device": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-device": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-device": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-device": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-adapter",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-instance": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-instance": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-instance": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-instance": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-instance": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-instance": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-adapter",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-after-select": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-after-select": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-after-select": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-after-select": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-after-select": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-after-select": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-device",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-device": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-device": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-device": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-device": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-device": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-device": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-device",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-instance": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-instance": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-instance": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-instance": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-instance": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-instance": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-device",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-after-select": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Bgra8Unorm"
+          },
+          "worker-after-select": {
+            "post-abandon": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "Mailbox"
+          },
+          "worker-after-select": {
+            "post-abandon": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": "0cc13b3373f65b25"
+          },
+          "worker-after-select": {
+            "post-abandon": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "post-abandon": null
+          },
+          "worker-after-select": {
+            "post-abandon": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-after-select": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-empty-mask",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "watchdog-timeout",
+          "worker-device": "watchdog-timeout"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "no-backends",
+            "timeout"
+          ],
+          "worker-device": [
+            "no-backends",
+            "timeout"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-empty-mask",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "watchdog-timeout",
+          "worker-instance": "watchdog-timeout"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "no-backends",
+            "timeout"
+          ],
+          "worker-instance": [
+            "no-backends",
+            "timeout"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-empty-mask",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "watchdog-timeout",
+          "worker-after-select": "watchdog-timeout"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "no-backends",
+            "timeout"
+          ],
+          "worker-after-select": [
+            "no-backends",
+            "timeout"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-limits",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "device-request-failed"
+          ],
+          "worker-device": [
+            "device-request-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-limits",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "device-request-failed"
+          ],
+          "worker-instance": [
+            "device-request-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-limits",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "device-request-failed"
+          ],
+          "worker-after-select": [
+            "device-request-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-unsupported-mask",
+      "strategy": "worker-device",
+      "verdict": "known-difference",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": false,
+          "ordinary": [
+            "surface-creation-failed"
+          ],
+          "worker-device": [
+            "adapter-not-found"
+          ],
+          "known": "no backend loaded for this mask: surface-first paths fail at surface creation, surface-free selection fails at adapter selection"
+        }
+      }
+    },
+    {
+      "variant": "failure-unsupported-mask",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-creation-failed"
+          ],
+          "worker-instance": [
+            "surface-creation-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-unsupported-mask",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-creation-failed"
+          ],
+          "worker-after-select": [
+            "surface-creation-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "multi-window",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-device": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          },
+          "worker-device": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          },
+          "worker-device": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          },
+          "worker-device": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "seq0": null,
+            "seq1": null,
+            "sim0": null,
+            "sim1": null
+          },
+          "worker-device": {
+            "seq0": null,
+            "seq1": null,
+            "sim0": null,
+            "sim1": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-device": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "multi-window",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-instance": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          },
+          "worker-instance": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          },
+          "worker-instance": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          },
+          "worker-instance": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "seq0": null,
+            "seq1": null,
+            "sim0": null,
+            "sim1": null
+          },
+          "worker-instance": {
+            "seq0": null,
+            "seq1": null,
+            "sim0": null,
+            "sim1": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-instance": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "multi-window",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-after-select": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          },
+          "worker-after-select": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          },
+          "worker-after-select": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          },
+          "worker-after-select": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "seq0": null,
+            "seq1": null,
+            "sim0": null,
+            "sim1": null
+          },
+          "worker-after-select": {
+            "seq0": null,
+            "seq1": null,
+            "sim0": null,
+            "sim1": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-after-select": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "repeated",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-device": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "r0": "Bgra8Unorm",
+            "r1": "Bgra8Unorm",
+            "r2": "Bgra8Unorm"
+          },
+          "worker-device": {
+            "r0": "Bgra8Unorm",
+            "r1": "Bgra8Unorm",
+            "r2": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "r0": "Mailbox",
+            "r1": "Mailbox",
+            "r2": "Mailbox"
+          },
+          "worker-device": {
+            "r0": "Mailbox",
+            "r1": "Mailbox",
+            "r2": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "r0": "0cc13b3373f65b25",
+            "r1": "0cc13b3373f65b25",
+            "r2": "0cc13b3373f65b25"
+          },
+          "worker-device": {
+            "r0": "0cc13b3373f65b25",
+            "r1": "0cc13b3373f65b25",
+            "r2": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "r0": null,
+            "r1": null,
+            "r2": null
+          },
+          "worker-device": {
+            "r0": null,
+            "r1": null,
+            "r2": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-device": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "repeated",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-instance": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "r0": "Bgra8Unorm",
+            "r1": "Bgra8Unorm",
+            "r2": "Bgra8Unorm"
+          },
+          "worker-instance": {
+            "r0": "Bgra8Unorm",
+            "r1": "Bgra8Unorm",
+            "r2": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "r0": "Mailbox",
+            "r1": "Mailbox",
+            "r2": "Mailbox"
+          },
+          "worker-instance": {
+            "r0": "Mailbox",
+            "r1": "Mailbox",
+            "r2": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "r0": "0cc13b3373f65b25",
+            "r1": "0cc13b3373f65b25",
+            "r2": "0cc13b3373f65b25"
+          },
+          "worker-instance": {
+            "r0": "0cc13b3373f65b25",
+            "r1": "0cc13b3373f65b25",
+            "r2": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "r0": null,
+            "r1": null,
+            "r2": null
+          },
+          "worker-instance": {
+            "r0": null,
+            "r1": null,
+            "r2": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-instance": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "repeated",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-after-select": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "r0": "Bgra8Unorm",
+            "r1": "Bgra8Unorm",
+            "r2": "Bgra8Unorm"
+          },
+          "worker-after-select": {
+            "r0": "Bgra8Unorm",
+            "r1": "Bgra8Unorm",
+            "r2": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "r0": "Mailbox",
+            "r1": "Mailbox",
+            "r2": "Mailbox"
+          },
+          "worker-after-select": {
+            "r0": "Mailbox",
+            "r1": "Mailbox",
+            "r2": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "r0": "0cc13b3373f65b25",
+            "r1": "0cc13b3373f65b25",
+            "r2": "0cc13b3373f65b25"
+          },
+          "worker-after-select": {
+            "r0": "0cc13b3373f65b25",
+            "r1": "0cc13b3373f65b25",
+            "r2": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "r0": null,
+            "r1": null,
+            "r2": null
+          },
+          "worker-after-select": {
+            "r0": null,
+            "r1": null,
+            "r2": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-after-select": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-device": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Bgra8Unorm"
+          },
+          "worker-device": {
+            "w0": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Mailbox"
+          },
+          "worker-device": {
+            "w0": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "0cc13b3373f65b25"
+          },
+          "worker-device": {
+            "w0": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "w0": null
+          },
+          "worker-device": {
+            "w0": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-device": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-instance": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Bgra8Unorm"
+          },
+          "worker-instance": {
+            "w0": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Mailbox"
+          },
+          "worker-instance": {
+            "w0": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "0cc13b3373f65b25"
+          },
+          "worker-instance": {
+            "w0": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "w0": null
+          },
+          "worker-instance": {
+            "w0": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-instance": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-after-select": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Bgra8Unorm"
+          },
+          "worker-after-select": {
+            "w0": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Mailbox"
+          },
+          "worker-after-select": {
+            "w0": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "0cc13b3373f65b25"
+          },
+          "worker-after-select": {
+            "w0": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "w0": null
+          },
+          "worker-after-select": {
+            "w0": null
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-configure-failed"
+          ],
+          "worker-after-select": [
+            "surface-configure-failed"
+          ]
+        }
+      }
+    }
+  ]
+}

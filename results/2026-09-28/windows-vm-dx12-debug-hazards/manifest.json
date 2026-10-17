@@ -1,0 +1,634 @@
+{
+  "started": "2026-09-28T09:43:52-0700",
+  "argv": [
+    "scripts\\run-matrix.py",
+    "--out",
+    "runs\\hz-dx12-debug-hazards",
+    "--profile",
+    "debug",
+    "--suite",
+    "base",
+    "hazards",
+    "--env",
+    "WGPU_BACKEND=dx12"
+  ],
+  "env_overrides": {
+    "WGPU_BACKEND": "dx12"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26100",
+    "machine": "ARM64",
+    "python": "3.12.10"
+  },
+  "harness_commit": "cbb9b2a7222c3108332fc1a53cb8599f6f9179c7",
+  "harness_dirty": false,
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+  "binary": "target\\debug\\slint-wgpu-worker-bench.exe",
+  "profile": "debug",
+  "timeout_s": 60,
+  "cases": [
+    {
+      "case": "ordinary__single",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 11.719
+    },
+    {
+      "case": "ordinary__multi-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 5.078
+    },
+    {
+      "case": "ordinary__repeated",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 5.485
+    },
+    {
+      "case": "ordinary__abandon-before-adapter",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 4.109
+    },
+    {
+      "case": "ordinary__abandon-before-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.391
+    },
+    {
+      "case": "ordinary__abandon-after-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.797
+    },
+    {
+      "case": "ordinary__failure-limits",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.265
+    },
+    {
+      "case": "ordinary__failure-empty-mask",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.594
+    },
+    {
+      "case": "ordinary__failure-unsupported-mask",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.672
+    },
+    {
+      "case": "ordinary__probe-concurrent",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.265
+    },
+    {
+      "case": "ordinary__probe-after-instance",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.344
+    },
+    {
+      "case": "ordinary__probe-after-adapter",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 3.047
+    },
+    {
+      "case": "ordinary__probe-after-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 5.531
+    },
+    {
+      "case": "ordinary__probe-after-first-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.562
+    },
+    {
+      "case": "ordinary__probe-reject-keep",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.032
+    },
+    {
+      "case": "ordinary__probe-reject-drop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.312
+    },
+    {
+      "case": "ordinary__join-block-before-adapter-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.75
+    },
+    {
+      "case": "ordinary__join-block-before-adapter-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.953
+    },
+    {
+      "case": "ordinary__join-block-before-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.688
+    },
+    {
+      "case": "ordinary__join-block-before-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.547
+    },
+    {
+      "case": "ordinary__join-block-after-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.359
+    },
+    {
+      "case": "ordinary__join-block-after-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 4.094
+    },
+    {
+      "case": "ordinary__early-exit-in-instance",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 1.578
+    },
+    {
+      "case": "ordinary__early-exit-in-adapter",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 3.484
+    },
+    {
+      "case": "ordinary__early-exit-in-device",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 2.297
+    },
+    {
+      "case": "worker-device__single",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 3.281
+    },
+    {
+      "case": "worker-device__multi-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 3.766
+    },
+    {
+      "case": "worker-device__repeated",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 3.016
+    },
+    {
+      "case": "worker-device__abandon-before-adapter",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.843
+    },
+    {
+      "case": "worker-device__abandon-before-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.407
+    },
+    {
+      "case": "worker-device__abandon-after-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.546
+    },
+    {
+      "case": "worker-device__failure-limits",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.391
+    },
+    {
+      "case": "worker-device__failure-empty-mask",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.563
+    },
+    {
+      "case": "worker-device__failure-unsupported-mask",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.734
+    },
+    {
+      "case": "worker-device__probe-concurrent",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.031
+    },
+    {
+      "case": "worker-device__probe-after-instance",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.188
+    },
+    {
+      "case": "worker-device__probe-after-adapter",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.515
+    },
+    {
+      "case": "worker-device__probe-after-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.688
+    },
+    {
+      "case": "worker-device__probe-after-first-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.375
+    },
+    {
+      "case": "worker-device__probe-reject-keep",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.406
+    },
+    {
+      "case": "worker-device__probe-reject-drop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 2.0
+    },
+    {
+      "case": "worker-device__join-block-before-adapter-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.719
+    },
+    {
+      "case": "worker-device__join-block-before-adapter-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.281
+    },
+    {
+      "case": "worker-device__join-block-before-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.016
+    },
+    {
+      "case": "worker-device__join-block-before-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.968
+    },
+    {
+      "case": "worker-device__join-block-after-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.907
+    },
+    {
+      "case": "worker-device__join-block-after-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.797
+    },
+    {
+      "case": "worker-device__early-exit-in-instance",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.078
+    },
+    {
+      "case": "worker-device__early-exit-in-adapter",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.093
+    },
+    {
+      "case": "worker-device__early-exit-in-device",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.172
+    },
+    {
+      "case": "worker-instance__single",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.407
+    },
+    {
+      "case": "worker-instance__multi-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.546
+    },
+    {
+      "case": "worker-instance__repeated",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.344
+    },
+    {
+      "case": "worker-instance__abandon-before-adapter",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.5
+    },
+    {
+      "case": "worker-instance__abandon-before-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.531
+    },
+    {
+      "case": "worker-instance__abandon-after-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.594
+    },
+    {
+      "case": "worker-instance__failure-limits",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.235
+    },
+    {
+      "case": "worker-instance__failure-empty-mask",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.109
+    },
+    {
+      "case": "worker-instance__failure-unsupported-mask",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.125
+    },
+    {
+      "case": "worker-instance__probe-concurrent",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.5
+    },
+    {
+      "case": "worker-instance__probe-after-instance",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.594
+    },
+    {
+      "case": "worker-instance__probe-after-adapter",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.562
+    },
+    {
+      "case": "worker-instance__probe-after-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.5
+    },
+    {
+      "case": "worker-instance__probe-after-first-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.422
+    },
+    {
+      "case": "worker-instance__probe-reject-keep",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.563
+    },
+    {
+      "case": "worker-instance__probe-reject-drop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.578
+    },
+    {
+      "case": "worker-instance__join-block-before-adapter-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.797
+    },
+    {
+      "case": "worker-instance__join-block-before-adapter-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.781
+    },
+    {
+      "case": "worker-instance__join-block-before-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.89
+    },
+    {
+      "case": "worker-instance__join-block-before-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.157
+    },
+    {
+      "case": "worker-instance__join-block-after-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.906
+    },
+    {
+      "case": "worker-instance__join-block-after-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.828
+    },
+    {
+      "case": "worker-instance__early-exit-in-instance",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.125
+    },
+    {
+      "case": "worker-instance__early-exit-in-adapter",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.188
+    },
+    {
+      "case": "worker-instance__early-exit-in-device",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.109
+    },
+    {
+      "case": "worker-after-select__single",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.75
+    },
+    {
+      "case": "worker-after-select__multi-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.156
+    },
+    {
+      "case": "worker-after-select__repeated",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.75
+    },
+    {
+      "case": "worker-after-select__abandon-before-adapter",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.078
+    },
+    {
+      "case": "worker-after-select__abandon-before-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.36
+    },
+    {
+      "case": "worker-after-select__abandon-after-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 1.218
+    },
+    {
+      "case": "worker-after-select__failure-limits",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.547
+    },
+    {
+      "case": "worker-after-select__failure-empty-mask",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.125
+    },
+    {
+      "case": "worker-after-select__failure-unsupported-mask",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.516
+    },
+    {
+      "case": "worker-after-select__probe-concurrent",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.734
+    },
+    {
+      "case": "worker-after-select__probe-after-instance",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.985
+    },
+    {
+      "case": "worker-after-select__probe-after-adapter",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.89
+    },
+    {
+      "case": "worker-after-select__probe-after-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.891
+    },
+    {
+      "case": "worker-after-select__probe-after-first-device",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.625
+    },
+    {
+      "case": "worker-after-select__probe-reject-keep",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.594
+    },
+    {
+      "case": "worker-after-select__probe-reject-drop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.547
+    },
+    {
+      "case": "worker-after-select__join-block-before-adapter-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.421
+    },
+    {
+      "case": "worker-after-select__join-block-before-adapter-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.5
+    },
+    {
+      "case": "worker-after-select__join-block-before-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.532
+    },
+    {
+      "case": "worker-after-select__join-block-before-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.515
+    },
+    {
+      "case": "worker-after-select__join-block-after-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.5
+    },
+    {
+      "case": "worker-after-select__join-block-after-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.469
+    },
+    {
+      "case": "worker-after-select__early-exit-in-instance",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.094
+    },
+    {
+      "case": "worker-after-select__early-exit-in-adapter",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.078
+    },
+    {
+      "case": "worker-after-select__early-exit-in-device",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.094
+    }
+  ]
+}

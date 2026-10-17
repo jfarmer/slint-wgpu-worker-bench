@@ -1,0 +1,252 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "dx12_gate_would_prepare": true,
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "build": {
+    "debug_assertions": false,
+    "dx12_compiler": "Auto",
+    "instance_flags": "InstanceFlags(VALIDATION | VALIDATION_INDIRECT_CALL)"
+  },
+  "device_counters": [
+    {
+      "bind_group_layouts": 6,
+      "buffers": 4,
+      "compute_pipelines": 2,
+      "context": "worker",
+      "pipeline_layouts": 2,
+      "render_pipelines": 0,
+      "shader_modules": 2,
+      "thread": "slint-wgpu-device"
+    }
+  ],
+  "dx12_compiler": "fxc",
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "SLINT_WGPU_CPU": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "VK_LOADER_DEVICE_SELECT": null,
+    "VK_LOADER_DISABLE_SELECT": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "dx12",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_DX12_PRESENTATION_SYSTEM": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": "1",
+    "WGPU_VALIDATION_INDIRECT_CALL": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 0.234,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 155.549,
+      "detail": {
+        "on_reject": "keep",
+        "worker_stage": "in-device"
+      },
+      "name": "probe_rejected"
+    },
+    {
+      "at_ms": 155.553,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 532.161,
+      "detail": {},
+      "name": "gpu_skipped"
+    },
+    {
+      "at_ms": 858.703,
+      "detail": {},
+      "name": "pending_dropped_at_exit"
+    }
+  ],
+  "finished_ms": 945.994,
+  "gpu_skipped": true,
+  "harness": "0.1.0",
+  "log": [
+    {
+      "at_ms": 1.966,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 8.692,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "main"
+    },
+    {
+      "at_ms": 98.143,
+      "level": "DEBUG",
+      "message": "Using FXC for shader compilation",
+      "target": "wgpu_hal::dx12::instance",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 120.525,
+      "level": "DEBUG",
+      "message": "Using FXC for shader compilation",
+      "target": "wgpu_hal::dx12::instance",
+      "thread": "main"
+    },
+    {
+      "at_ms": 615.747,
+      "level": "DEBUG",
+      "message": "Naga generated shader for \"main\" at Compute:\nstruct __dynamic_buffer_offsetsTy1 {\n    uint _0;\n};\nConstantBuffer<__dynamic_buffer_offsetsTy1> __dynamic_buffer_offsets1: register(b1, space1);\n\nstruct OffsetPc {\n    uint inner;\n};\n\nRWByteAddressBuffer dst_ : register(u0);\nByteAddressBuffer src : register(t0);\nConstantBuffer<OffsetPc> offset: register(b0);\n\ntypedef uint ret_Constructarray6_uint_[6];\nret_Constructarray6_uint_ Constructarray6_uint_(uint arg0, uint arg1, uint arg2, uint arg3, uint arg4, uint arg5) {\n    uint ret[6] = { arg0, arg1, arg2, arg3, arg4, arg5 };\n    return ret;\n}\n\n[numthr",
+      "target": "wgpu_hal::dx12::device",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 639.867,
+      "level": "DEBUG",
+      "message": "Naga generated shader for \"main\" at Compute:\nstruct __dynamic_buffer_offsetsTy1 {\n    uint _0;\n};\nConstantBuffer<__dynamic_buffer_offsetsTy1> __dynamic_buffer_offsets1: register(b1, space1);\n\nstruct MetadataEntry {\n    uint src_offset;\n    uint dst_offset;\n    uint vertex_or_index_limit;\n    uint instance_limit;\n};\n\nstruct MetadataRange {\n    uint start;\n    uint count;\n};\n\nstatic const uint OFFSET_MASK = 1073741823u;\nstatic const bool supports_indirect_first_instance = true;\nstatic const bool write_d3d12_special_constants = true;\n\nConstantBuffer<MetadataRange> metadata_range: register(b0);\nBy",
+      "target": "wgpu_hal::dx12::device",
+      "thread": "slint-wgpu-device"
+    }
+  ],
+  "log_dropped": 0,
+  "options": {
+    "abandon_at": "before-device",
+    "exit_at": "in-device",
+    "failure": "none",
+    "join_at": "before-event-loop",
+    "linger_ms": 300,
+    "on_probe_reject": "keep",
+    "probe": "concurrent",
+    "probe_validation": false,
+    "release_after_ms": 300,
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 8.324,
+      "end_ms": 8.653,
+      "name": "event_loop",
+      "start_ms": 0.329,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 97.335,
+      "end_ms": 98.154,
+      "name": "instance",
+      "start_ms": 0.818,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 56.421,
+      "end_ms": 154.583,
+      "name": "adapter",
+      "start_ms": 98.163,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 146.859,
+      "end_ms": 155.538,
+      "name": "probe",
+      "start_ms": 8.679,
+      "thread": "main"
+    },
+    {
+      "context": "stand-in",
+      "duration_ms": 376.579,
+      "end_ms": 532.145,
+      "name": "window",
+      "start_ms": 155.566,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 532.867,
+      "end_ms": 687.462,
+      "name": "device",
+      "start_ms": 154.595,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.016,
+      "end_ms": 858.811,
+      "name": "worker_join",
+      "start_ms": 858.795,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 87.157,
+      "end_ms": 945.947,
+      "name": "drop_pending",
+      "start_ms": 858.791,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "prepared_release": {
+    "had_device": true,
+    "had_worker": true,
+    "join_and_drop_ms": 87.206,
+    "released_at_ms": 945.957,
+    "when": "exit",
+    "worker_stage_before": "finished"
+  },
+  "probe": {
+    "adapters": [
+      {
+        "backend": "Dx12",
+        "device_type": "Cpu",
+        "name": "Microsoft Basic Render Driver"
+      }
+    ],
+    "any_gpu": false,
+    "forced_validation": false,
+    "instance_created": true,
+    "point": "concurrent",
+    "rejected": true,
+    "slint_wgpu_cpu": false,
+    "start_ms": 8.669,
+    "waited_for_stage": "in-instance",
+    "worker_stage_after_probe": "in-device",
+    "worker_stage_at_probe": "in-instance"
+  },
+  "scenario": "single",
+  "status": "completed",
+  "strategy": "worker-device",
+  "wgpu": "30.0.1",
+  "windows": []
+}

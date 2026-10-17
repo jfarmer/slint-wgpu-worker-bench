@@ -1,0 +1,35 @@
+# Rust builds, including the separate Slint probe builds.
+target/
+target-*/
+
+# Fresh runs stay local. Existing reviewed JSON and summaries remain tracked.
+/runs/
+/results/*/
+/slint-integration/app-*/
+/slint-integration/out/
+/slint-integration/stress/
+
+# Raw diagnostics and generated task wrappers.
+*.log
+*.ips
+*.dmp
+*.core
+core
+crash-reports/
+*.task.cmd
+*.done
+command.txt
+application-errors.txt
+start-time.txt
+
+# Python, editor, assistant, and local environment files.
+__pycache__/
+*.py[cod]
+.DS_Store
+.serena/
+.codex/
+.agents/
+.idea/
+.vscode/
+.env
+.env.*

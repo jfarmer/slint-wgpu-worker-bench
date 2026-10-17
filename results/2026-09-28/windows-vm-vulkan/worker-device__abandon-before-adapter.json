@@ -1,0 +1,145 @@
+{
+  "abandon": {
+    "finished_before_timeout": true,
+    "join_ms": 2.262,
+    "reached": "before-adapter",
+    "requested_at": "before-adapter",
+    "worker_result_ok": false
+  },
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(VULKAN)",
+    "effective_and_enabled": "Backends(VULKAN)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(VULKAN)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "vulkan",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 50.205,
+      "class": "surface-creation-failed",
+      "context": "post-abandon",
+      "message": "Error creating wgpu window surface: Failed to create surface for any enabled backend: {}",
+      "phase": "surface"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 0.172,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 2.743,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 10.391,
+      "detail": {
+        "reached": "before-adapter",
+        "requested": "before-adapter"
+      },
+      "name": "gate_reached"
+    }
+  ],
+  "finished_ms": 50.478,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-adapter",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 2.53,
+      "end_ms": 2.733,
+      "name": "event_loop",
+      "start_ms": 0.203,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 10.014,
+      "end_ms": 10.356,
+      "name": "instance",
+      "start_ms": 0.342,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 0.025,
+      "end_ms": 10.445,
+      "name": "adapter",
+      "start_ms": 10.42,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.022,
+      "end_ms": 12.652,
+      "name": "abandon_join_and_drop",
+      "start_ms": 12.63,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 33.014,
+      "end_ms": 45.681,
+      "name": "window",
+      "start_ms": 12.667,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 4.418,
+      "end_ms": 50.116,
+      "name": "instance",
+      "start_ms": 45.698,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.018,
+      "end_ms": 50.139,
+      "name": "surface",
+      "start_ms": 50.121,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "abandon",
+  "status": "completed",
+  "strategy": "worker-device",
+  "wgpu": "30.0.1",
+  "windows": []
+}

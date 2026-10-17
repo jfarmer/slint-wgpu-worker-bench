@@ -1,0 +1,55 @@
+{
+  "started": "2026-09-28T09:49:34-0700",
+  "argv": [
+    "scripts\\run-matrix.py",
+    "--out",
+    "runs\\hz-dx12-gl-mask",
+    "--scenarios",
+    "single",
+    "--env",
+    "WGPU_BACKEND=dx12,gl"
+  ],
+  "env_overrides": {
+    "WGPU_BACKEND": "dx12,gl"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26100",
+    "machine": "ARM64",
+    "python": "3.12.10"
+  },
+  "harness_commit": "cbb9b2a7222c3108332fc1a53cb8599f6f9179c7",
+  "harness_dirty": false,
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+  "binary": "target\\release\\slint-wgpu-worker-bench.exe",
+  "profile": "release",
+  "timeout_s": 60,
+  "cases": [
+    {
+      "case": "ordinary__single",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.328
+    },
+    {
+      "case": "worker-device__single",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.36
+    },
+    {
+      "case": "worker-instance__single",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.296
+    },
+    {
+      "case": "worker-after-select__single",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.375
+    }
+  ]
+}

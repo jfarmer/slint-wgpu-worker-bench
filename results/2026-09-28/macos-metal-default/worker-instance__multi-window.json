@@ -1,0 +1,628 @@
+{
+  "adapters_surface_free": [
+    {
+      "backend": "Metal",
+      "device": 0,
+      "device_type": "IntegratedGpu",
+      "driver": "",
+      "driver_info": "",
+      "name": "Apple M4 Max",
+      "vendor": 0
+    }
+  ],
+  "adapters_with_surface_support": [
+    {
+      "backend": "Metal",
+      "device": 0,
+      "device_type": "IntegratedGpu",
+      "driver": "",
+      "driver_info": "",
+      "is_surface_supported": true,
+      "name": "Apple M4 Max",
+      "vendor": 0
+    }
+  ],
+  "backends": {
+    "avoid": "Backends(GL | DX12)",
+    "effective": "Backends(NOOP | VULKAN | METAL | BROWSER_WEBGPU)",
+    "effective_and_enabled": "Backends(METAL)",
+    "enabled_features": "Backends(METAL)",
+    "requested": "Backends(NOOP | VULKAN | GL | METAL | DX12 | BROWSER_WEBGPU)",
+    "slint_would_prepare_on_worker": true
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": "/var/run/com.apple.launchd.O2OBBDGAYH/org.xquartz:0",
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": null,
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 0.044,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 54.435,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 136.852,
+      "detail": {
+        "count": 2
+      },
+      "name": "simultaneous_windows_alive"
+    }
+  ],
+  "finished_ms": 205.319,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "worker",
+      "duration_ms": 0.016,
+      "end_ms": 0.093,
+      "name": "instance",
+      "start_ms": 0.077,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 36.81,
+      "end_ms": 36.865,
+      "name": "event_loop",
+      "start_ms": 0.056,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 40.403,
+      "end_ms": 94.847,
+      "name": "window",
+      "start_ms": 54.444,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.011,
+      "end_ms": 94.867,
+      "name": "worker_join",
+      "start_ms": 94.856,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 0.65,
+      "end_ms": 95.519,
+      "name": "surface",
+      "start_ms": 94.869,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 0.087,
+      "end_ms": 95.608,
+      "name": "adapter",
+      "start_ms": 95.521,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 2.85,
+      "end_ms": 98.46,
+      "name": "device",
+      "start_ms": 95.61,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 0.053,
+      "end_ms": 98.584,
+      "name": "configure",
+      "start_ms": 98.531,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 0.26,
+      "end_ms": 98.851,
+      "name": "first_pipeline",
+      "start_ms": 98.591,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 10.306,
+      "end_ms": 109.158,
+      "name": "first_frame_submitted",
+      "start_ms": 98.852,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 0.012,
+      "end_ms": 109.174,
+      "name": "present",
+      "start_ms": 109.162,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 5.966,
+      "end_ms": 126.127,
+      "name": "window",
+      "start_ms": 120.161,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.132,
+      "end_ms": 126.263,
+      "name": "surface",
+      "start_ms": 126.131,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.035,
+      "end_ms": 126.306,
+      "name": "configure",
+      "start_ms": 126.271,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.211,
+      "end_ms": 126.523,
+      "name": "first_pipeline",
+      "start_ms": 126.313,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.764,
+      "end_ms": 127.289,
+      "name": "first_frame_submitted",
+      "start_ms": 126.525,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.003,
+      "end_ms": 127.294,
+      "name": "present",
+      "start_ms": 127.291,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 4.556,
+      "end_ms": 132.546,
+      "name": "window",
+      "start_ms": 127.99,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.041,
+      "end_ms": 132.59,
+      "name": "surface",
+      "start_ms": 132.55,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 4.215,
+      "end_ms": 136.807,
+      "name": "window",
+      "start_ms": 132.592,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.041,
+      "end_ms": 136.851,
+      "name": "surface",
+      "start_ms": 136.81,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.032,
+      "end_ms": 136.89,
+      "name": "configure",
+      "start_ms": 136.858,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.18,
+      "end_ms": 137.077,
+      "name": "first_pipeline",
+      "start_ms": 136.897,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.679,
+      "end_ms": 137.757,
+      "name": "first_frame_submitted",
+      "start_ms": 137.079,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.002,
+      "end_ms": 137.761,
+      "name": "present",
+      "start_ms": 137.759,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.018,
+      "end_ms": 137.783,
+      "name": "configure",
+      "start_ms": 137.765,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.116,
+      "end_ms": 137.904,
+      "name": "first_pipeline",
+      "start_ms": 137.788,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.278,
+      "end_ms": 138.183,
+      "name": "first_frame_submitted",
+      "start_ms": 137.905,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.001,
+      "end_ms": 138.186,
+      "name": "present",
+      "start_ms": 138.185,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "unix",
+    "os": "macos"
+  },
+  "scenario": "multi-window",
+  "selected_adapter": {
+    "backend": "Metal",
+    "device": 0,
+    "device_type": "IntegratedGpu",
+    "driver": "",
+    "driver_info": "",
+    "name": "Apple M4 Max",
+    "vendor": 0
+  },
+  "status": "completed",
+  "strategy": "worker-instance",
+  "wgpu": "30.0.1",
+  "windows": [
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque",
+          "PostMultiplied"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba16Float",
+          "Rgb10a2Unorm"
+        ],
+        "present_modes": [
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | STORAGE_BINDING | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Fifo",
+        "width": 640
+      },
+      "context": "seq0",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "sequential",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            77,
+            255
+          ]
+        },
+        "rgba_hash": "7100ffcd71a3d825",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_immediate": "occluded"
+    },
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque",
+          "PostMultiplied"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba16Float",
+          "Rgb10a2Unorm"
+        ],
+        "present_modes": [
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | STORAGE_BINDING | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Fifo",
+        "width": 640
+      },
+      "context": "seq1",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "sequential",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            77,
+            255
+          ]
+        },
+        "rgba_hash": "7100ffcd71a3d825",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_immediate": "occluded"
+    },
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque",
+          "PostMultiplied"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba16Float",
+          "Rgb10a2Unorm"
+        ],
+        "present_modes": [
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | STORAGE_BINDING | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Fifo",
+        "width": 640
+      },
+      "context": "sim0",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "simultaneous",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            77,
+            255
+          ]
+        },
+        "rgba_hash": "7100ffcd71a3d825",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 190.088,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "occluded"
+    },
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque",
+          "PostMultiplied"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba16Float",
+          "Rgb10a2Unorm"
+        ],
+        "present_modes": [
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | STORAGE_BINDING | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Fifo",
+        "width": 640
+      },
+      "context": "sim1",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "simultaneous",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            77,
+            255
+          ]
+        },
+        "rgba_hash": "7100ffcd71a3d825",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 190.843,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "occluded"
+    }
+  ]
+}

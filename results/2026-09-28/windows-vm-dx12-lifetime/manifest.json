@@ -1,0 +1,247 @@
+{
+  "started": "2026-09-28T09:47:18-0700",
+  "argv": [
+    "scripts\\run-matrix.py",
+    "--out",
+    "runs\\hz-dx12-lifetime",
+    "--suite",
+    "lifetime",
+    "--env",
+    "WGPU_BACKEND=dx12"
+  ],
+  "env_overrides": {
+    "WGPU_BACKEND": "dx12"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26100",
+    "machine": "ARM64",
+    "python": "3.12.10"
+  },
+  "harness_commit": "cbb9b2a7222c3108332fc1a53cb8599f6f9179c7",
+  "harness_dirty": false,
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+  "binary": "target\\release\\slint-wgpu-worker-bench.exe",
+  "profile": "release",
+  "timeout_s": 60,
+  "cases": [
+    {
+      "case": "ordinary__join-block-before-adapter-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.344
+    },
+    {
+      "case": "ordinary__join-block-before-adapter-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.281
+    },
+    {
+      "case": "ordinary__join-block-before-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.391
+    },
+    {
+      "case": "ordinary__join-block-before-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.312
+    },
+    {
+      "case": "ordinary__join-block-after-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.36
+    },
+    {
+      "case": "ordinary__join-block-after-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.281
+    },
+    {
+      "case": "ordinary__early-exit-in-instance",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.109
+    },
+    {
+      "case": "ordinary__early-exit-in-adapter",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.094
+    },
+    {
+      "case": "ordinary__early-exit-in-device",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.078
+    },
+    {
+      "case": "worker-device__join-block-before-adapter-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.594
+    },
+    {
+      "case": "worker-device__join-block-before-adapter-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.609
+    },
+    {
+      "case": "worker-device__join-block-before-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.719
+    },
+    {
+      "case": "worker-device__join-block-before-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.641
+    },
+    {
+      "case": "worker-device__join-block-after-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.656
+    },
+    {
+      "case": "worker-device__join-block-after-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.641
+    },
+    {
+      "case": "worker-device__early-exit-in-instance",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.156
+    },
+    {
+      "case": "worker-device__early-exit-in-adapter",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.094
+    },
+    {
+      "case": "worker-device__early-exit-in-device",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.171
+    },
+    {
+      "case": "worker-instance__join-block-before-adapter-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.625
+    },
+    {
+      "case": "worker-instance__join-block-before-adapter-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.672
+    },
+    {
+      "case": "worker-instance__join-block-before-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.672
+    },
+    {
+      "case": "worker-instance__join-block-before-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.688
+    },
+    {
+      "case": "worker-instance__join-block-after-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.718
+    },
+    {
+      "case": "worker-instance__join-block-after-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.672
+    },
+    {
+      "case": "worker-instance__early-exit-in-instance",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.063
+    },
+    {
+      "case": "worker-instance__early-exit-in-adapter",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.156
+    },
+    {
+      "case": "worker-instance__early-exit-in-device",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.125
+    },
+    {
+      "case": "worker-after-select__join-block-before-adapter-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.406
+    },
+    {
+      "case": "worker-after-select__join-block-before-adapter-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.453
+    },
+    {
+      "case": "worker-after-select__join-block-before-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.375
+    },
+    {
+      "case": "worker-after-select__join-block-before-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.375
+    },
+    {
+      "case": "worker-after-select__join-block-after-device-before-loop",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.36
+    },
+    {
+      "case": "worker-after-select__join-block-after-device-after-window",
+      "exit_code": 0,
+      "exit": "completed",
+      "wall_s": 0.422
+    },
+    {
+      "case": "worker-after-select__early-exit-in-instance",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.093
+    },
+    {
+      "case": "worker-after-select__early-exit-in-adapter",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.094
+    },
+    {
+      "case": "worker-after-select__early-exit-in-device",
+      "exit_code": 7,
+      "exit": "early-exit",
+      "wall_s": 0.11
+    }
+  ]
+}

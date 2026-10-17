@@ -1,0 +1,117 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL | DX12)",
+    "effective": "Backends(VULKAN)",
+    "effective_and_enabled": "Backends(VULKAN)",
+    "enabled_features": "Backends(VULKAN | GL)",
+    "requested": "Backends(VULKAN)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": ":99",
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "vulkan",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 30.656,
+      "class": "device-request-failed",
+      "context": "w0",
+      "message": "Failed to create device: Limit 'max_bind_groups' value 4294967295 is better than allowed 8",
+      "phase": "device"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 14.887,
+      "detail": {},
+      "name": "resumed"
+    }
+  ],
+  "finished_ms": 31.624,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "limits",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 14.412,
+      "end_ms": 14.883,
+      "name": "event_loop",
+      "start_ms": 0.471,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.24,
+      "end_ms": 15.13,
+      "name": "window",
+      "start_ms": 14.89,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 13.692,
+      "end_ms": 28.825,
+      "name": "instance",
+      "start_ms": 15.133,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.63,
+      "end_ms": 29.46,
+      "name": "surface",
+      "start_ms": 28.831,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 1.142,
+      "end_ms": 30.605,
+      "name": "adapter",
+      "start_ms": 29.463,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.039,
+      "end_ms": 30.647,
+      "name": "device",
+      "start_ms": 30.608,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "unix",
+    "os": "linux"
+  },
+  "scenario": "failure",
+  "status": "completed",
+  "strategy": "ordinary",
+  "wgpu": "30.0.1",
+  "windows": []
+}

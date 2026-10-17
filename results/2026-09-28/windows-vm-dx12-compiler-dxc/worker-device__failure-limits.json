@@ -1,0 +1,156 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "dx12_gate_would_prepare": true,
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "build": {
+    "debug_assertions": false,
+    "dx12_compiler": "DynamicDxc { dxc_path: \"dxcompiler.dll\" }",
+    "instance_flags": "InstanceFlags(VALIDATION_INDIRECT_CALL)"
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "SLINT_WGPU_CPU": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "VK_LOADER_DEVICE_SELECT": null,
+    "VK_LOADER_DISABLE_SELECT": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "dx12",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": "dxc",
+    "WGPU_DX12_PRESENTATION_SYSTEM": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WGPU_VALIDATION_INDIRECT_CALL": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 50.742,
+      "class": "adapter-not-found",
+      "context": "w0",
+      "message": "Failed to find an appropriate adapter: No suitable graphics adapter found; noop not requested, vulkan not requested, metal not requested, dx12 drivers/libraries could not be loaded, gl not requested, webgpu not requested",
+      "phase": "adapter"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 0.227,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 2.608,
+      "detail": {},
+      "name": "resumed"
+    }
+  ],
+  "finished_ms": 51.574,
+  "harness": "0.1.0",
+  "log": [
+    {
+      "at_ms": 0.901,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 7.795,
+      "level": "DEBUG",
+      "message": "Instance::new: failed to create Dx12 backend: InstanceError { message: \"Failed to load dynamic DXC\", source: Some(FailedToLoad(\"dxcompiler.dll\", LoadLibraryExW { source: Os { code: 126, kind: Uncategorized, message: \"The specified module could not be found.\" } })) }",
+      "target": "wgpu_core::instance",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 7.837,
+      "level": "DEBUG",
+      "message": "Request adapter didn't find compatible adapters.",
+      "target": "wgpu_core::instance",
+      "thread": "slint-wgpu-device"
+    }
+  ],
+  "log_dropped": 0,
+  "options": {
+    "abandon_at": "before-device",
+    "exit_at": "in-device",
+    "failure": "limits",
+    "join_at": "before-event-loop",
+    "linger_ms": 300,
+    "on_probe_reject": "continue",
+    "probe": "none",
+    "probe_validation": false,
+    "release_after_ms": 300,
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 2.306,
+      "end_ms": 2.575,
+      "name": "event_loop",
+      "start_ms": 0.27,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 7.397,
+      "end_ms": 7.809,
+      "name": "instance",
+      "start_ms": 0.412,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 0.024,
+      "end_ms": 7.843,
+      "name": "adapter",
+      "start_ms": 7.819,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 48.01,
+      "end_ms": 50.634,
+      "name": "window",
+      "start_ms": 2.624,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.012,
+      "end_ms": 50.671,
+      "name": "worker_join",
+      "start_ms": 50.659,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "failure",
+  "status": "completed",
+  "strategy": "worker-device",
+  "wgpu": "30.0.1",
+  "windows": []
+}

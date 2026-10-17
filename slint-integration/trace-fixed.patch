@@ -1,0 +1,61 @@
+--- a/internal/backends/winit/wgpu_device.rs	2026-09-28 09:47:18.511327159 -0400
++++ b/internal/backends/winit/wgpu_device.rs	2026-09-28 09:47:18.643130212 -0400
+@@ -24,10 +24,12 @@
+     let (claim, claimed) = mpsc::channel();
+     let thread = std::thread::Builder::new().name("slint-wgpu-device".into()).spawn(move || {
+         let result = with_autorelease_pool(prepare);
++        eprintln!("slint-wgpu-trace: worker finished thread={:?} ok={} adapter={:?}", std::thread::current().name(), result.is_ok(), result.as_ref().ok().map(|c| match c { WGPUConfiguration::Manual { adapter, .. } => adapter.get_info().name, _ => String::new() }));
+         if claimed.recv().is_ok() {
+             return Some(result);
+         }
+         with_autorelease_pool(|| drop(result));
++        eprintln!("slint-wgpu-trace: worker destroyed unclaimed result");
+         None
+     })?;
+     Ok(Task { claim, thread })
+@@ -43,6 +45,7 @@
+             requested_api,
+             std::env::var_os("WGPU_ADAPTER_NAME").is_some(),
+         ) {
++            eprintln!("slint-wgpu-trace: declined configuration");
+             return Self::default();
+         }
+         let backends = wgpu_30::mask_backends(
+@@ -53,8 +56,10 @@
+             backends & wgpu::Instance::enabled_backend_features(),
+             wgpu::InstanceFlags::from_build_config().with_env(),
+         ) {
++            eprintln!("slint-wgpu-trace: declined backends={backends:?} flags={:?}", wgpu::InstanceFlags::from_build_config().with_env());
+             return Self::default();
+         }
++        eprintln!("slint-wgpu-trace: worker spawned backends={backends:?}");
+         Self::from_spawn_result(spawn_task(move || {
+             wgpu_30::prepare_default_device_without_surface(backends)
+         }))
+@@ -66,12 +71,14 @@
+ 
+     pub fn take(&self) -> Option<DeviceResult> {
+         let Task { claim, thread } = self.task.take()?;
++        eprintln!("slint-wgpu-trace: consumed");
+         let _ = claim.send(());
+         thread.join().unwrap_or_else(|panic| std::panic::resume_unwind(panic))
+     }
+ 
+     pub fn discard(&self) {
+         if let Some(Task { claim, thread }) = self.task.take() {
++            eprintln!("slint-wgpu-trace: discarded");
+             drop(claim);
+             let _ = thread.join();
+         }
+@@ -83,7 +90,10 @@
+         // This usually runs in thread-local destructors at exit. Windows has terminated the
+         // worker by then, and the objc2 autorelease pools that Metal destruction uses panic.
+         // Releasing the claim lets a live worker destroy its own result.
+-        drop(self.task.take());
++        if let Some(task) = self.task.take() {
++            eprintln!("slint-wgpu-trace: released on drop");
++            drop(task);
++        }
+     }
+ }
+ 

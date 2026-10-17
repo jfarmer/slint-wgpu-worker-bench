@@ -1,0 +1,636 @@
+{
+  "adapters_surface_free": [
+    {
+      "backend": "Dx12",
+      "device": 140,
+      "device_type": "Cpu",
+      "driver": "10.0.26100.5074",
+      "driver_info": "",
+      "name": "Microsoft Basic Render Driver",
+      "vendor": 5140
+    }
+  ],
+  "adapters_with_surface_support": [
+    {
+      "backend": "Dx12",
+      "device": 140,
+      "device_type": "Cpu",
+      "driver": "10.0.26100.5074",
+      "driver_info": "",
+      "is_surface_supported": true,
+      "name": "Microsoft Basic Render Driver",
+      "vendor": 5140
+    }
+  ],
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "dx12",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 0.185,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 2.358,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 105.39,
+      "detail": {
+        "count": 2
+      },
+      "name": "simultaneous_windows_alive"
+    }
+  ],
+  "finished_ms": 117.133,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 2.131,
+      "end_ms": 2.347,
+      "name": "event_loop",
+      "start_ms": 0.217,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 6.869,
+      "end_ms": 7.23,
+      "name": "instance",
+      "start_ms": 0.361,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 34.527,
+      "end_ms": 36.896,
+      "name": "window",
+      "start_ms": 2.37,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.011,
+      "end_ms": 36.925,
+      "name": "worker_join",
+      "start_ms": 36.915,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 0.065,
+      "end_ms": 36.995,
+      "name": "surface",
+      "start_ms": 36.931,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 10.826,
+      "end_ms": 47.839,
+      "name": "adapter",
+      "start_ms": 37.013,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 17.349,
+      "end_ms": 65.197,
+      "name": "device",
+      "start_ms": 47.849,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 1.424,
+      "end_ms": 68.412,
+      "name": "configure",
+      "start_ms": 66.988,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 3.092,
+      "end_ms": 71.526,
+      "name": "first_pipeline",
+      "start_ms": 68.435,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 2.395,
+      "end_ms": 73.924,
+      "name": "first_frame_submitted",
+      "start_ms": 71.529,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 0.267,
+      "end_ms": 74.193,
+      "name": "present",
+      "start_ms": 73.926,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 8.208,
+      "end_ms": 83.072,
+      "name": "window",
+      "start_ms": 74.865,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.004,
+      "end_ms": 83.082,
+      "name": "surface",
+      "start_ms": 83.077,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 1.337,
+      "end_ms": 84.422,
+      "name": "configure",
+      "start_ms": 83.086,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.446,
+      "end_ms": 84.878,
+      "name": "first_pipeline",
+      "start_ms": 84.432,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.857,
+      "end_ms": 85.736,
+      "name": "first_frame_submitted",
+      "start_ms": 84.879,
+      "thread": "main"
+    },
+    {
+      "context": "seq1",
+      "duration_ms": 0.187,
+      "end_ms": 85.925,
+      "name": "present",
+      "start_ms": 85.738,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 8.911,
+      "end_ms": 95.58,
+      "name": "window",
+      "start_ms": 86.669,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.007,
+      "end_ms": 95.6,
+      "name": "surface",
+      "start_ms": 95.594,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 9.712,
+      "end_ms": 105.316,
+      "name": "window",
+      "start_ms": 95.604,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.005,
+      "end_ms": 105.338,
+      "name": "surface",
+      "start_ms": 105.333,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 1.569,
+      "end_ms": 106.967,
+      "name": "configure",
+      "start_ms": 105.398,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.453,
+      "end_ms": 107.429,
+      "name": "first_pipeline",
+      "start_ms": 106.976,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.839,
+      "end_ms": 108.27,
+      "name": "first_frame_submitted",
+      "start_ms": 107.43,
+      "thread": "main"
+    },
+    {
+      "context": "sim0",
+      "duration_ms": 0.206,
+      "end_ms": 108.477,
+      "name": "present",
+      "start_ms": 108.271,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 1.455,
+      "end_ms": 109.936,
+      "name": "configure",
+      "start_ms": 108.481,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.137,
+      "end_ms": 110.078,
+      "name": "first_pipeline",
+      "start_ms": 109.942,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.249,
+      "end_ms": 110.329,
+      "name": "first_frame_submitted",
+      "start_ms": 110.08,
+      "thread": "main"
+    },
+    {
+      "context": "sim1",
+      "duration_ms": 0.207,
+      "end_ms": 110.538,
+      "name": "present",
+      "start_ms": 110.331,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "multi-window",
+  "selected_adapter": {
+    "backend": "Dx12",
+    "device": 140,
+    "device_type": "Cpu",
+    "driver": "10.0.26100.5074",
+    "driver_info": "",
+    "name": "Microsoft Basic Render Driver",
+    "vendor": 5140
+  },
+  "status": "completed",
+  "strategy": "worker-instance",
+  "wgpu": "30.0.1",
+  "windows": [
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Rgba8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba8Unorm",
+          "Rgb10a2Unorm",
+          "Rgba16Float"
+        ],
+        "present_modes": [
+          "Mailbox",
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Mailbox",
+        "width": 640
+      },
+      "context": "seq0",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "sequential",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            76,
+            255
+          ]
+        },
+        "rgba_hash": "0cc13b3373f65b25",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_immediate": "success"
+    },
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Rgba8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba8Unorm",
+          "Rgb10a2Unorm",
+          "Rgba16Float"
+        ],
+        "present_modes": [
+          "Mailbox",
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Mailbox",
+        "width": 640
+      },
+      "context": "seq1",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "sequential",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            76,
+            255
+          ]
+        },
+        "rgba_hash": "0cc13b3373f65b25",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_immediate": "success"
+    },
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Rgba8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba8Unorm",
+          "Rgb10a2Unorm",
+          "Rgba16Float"
+        ],
+        "present_modes": [
+          "Mailbox",
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Mailbox",
+        "width": 640
+      },
+      "context": "sim0",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "simultaneous",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            76,
+            255
+          ]
+        },
+        "rgba_hash": "0cc13b3373f65b25",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 110.754,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "success"
+    },
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Rgba8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba8Unorm",
+          "Rgb10a2Unorm",
+          "Rgba16Float"
+        ],
+        "present_modes": [
+          "Mailbox",
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Mailbox",
+        "width": 640
+      },
+      "context": "sim1",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "simultaneous",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            76,
+            255
+          ]
+        },
+        "rgba_hash": "0cc13b3373f65b25",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 111.011,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "success"
+    }
+  ]
+}

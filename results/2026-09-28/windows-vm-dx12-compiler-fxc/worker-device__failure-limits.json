@@ -1,0 +1,158 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "dx12_gate_would_prepare": true,
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "build": {
+    "debug_assertions": false,
+    "dx12_compiler": "Fxc",
+    "instance_flags": "InstanceFlags(VALIDATION_INDIRECT_CALL)"
+  },
+  "dx12_compiler": "fxc",
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "SLINT_WGPU_CPU": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "VK_LOADER_DEVICE_SELECT": null,
+    "VK_LOADER_DISABLE_SELECT": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "dx12",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": "fxc",
+    "WGPU_DX12_PRESENTATION_SYSTEM": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WGPU_VALIDATION_INDIRECT_CALL": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 84.927,
+      "class": "device-request-failed",
+      "context": "w0",
+      "message": "Failed to create device: Limit 'max_bind_groups' value 4294967295 is better than allowed 8",
+      "phase": "device"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 0.404,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 8.073,
+      "detail": {},
+      "name": "resumed"
+    }
+  ],
+  "finished_ms": 108.639,
+  "harness": "0.1.0",
+  "log": [
+    {
+      "at_ms": 1.981,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 19.877,
+      "level": "DEBUG",
+      "message": "Using FXC for shader compilation",
+      "target": "wgpu_hal::dx12::instance",
+      "thread": "slint-wgpu-device"
+    }
+  ],
+  "log_dropped": 0,
+  "options": {
+    "abandon_at": "before-device",
+    "exit_at": "in-device",
+    "failure": "limits",
+    "join_at": "before-event-loop",
+    "linger_ms": 300,
+    "on_probe_reject": "continue",
+    "probe": "none",
+    "probe_validation": false,
+    "release_after_ms": 300,
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 7.56,
+      "end_ms": 8.06,
+      "name": "event_loop",
+      "start_ms": 0.5,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 18.895,
+      "end_ms": 19.906,
+      "name": "instance",
+      "start_ms": 1.011,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 29.625,
+      "end_ms": 49.545,
+      "name": "adapter",
+      "start_ms": 19.92,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 0.033,
+      "end_ms": 49.59,
+      "name": "device",
+      "start_ms": 49.557,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 76.747,
+      "end_ms": 84.837,
+      "name": "window",
+      "start_ms": 8.09,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.013,
+      "end_ms": 84.871,
+      "name": "worker_join",
+      "start_ms": 84.859,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "failure",
+  "status": "completed",
+  "strategy": "worker-device",
+  "wgpu": "30.0.1",
+  "windows": []
+}

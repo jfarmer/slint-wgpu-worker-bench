@@ -1,0 +1,301 @@
+{
+  "abandon": {
+    "finished_before_timeout": true,
+    "join_ms": 13.908,
+    "reached": "before-adapter",
+    "requested_at": "before-adapter",
+    "worker_result_ok": true
+  },
+  "adapters_surface_free": [
+    {
+      "backend": "Vulkan",
+      "device": 0,
+      "device_type": "Cpu",
+      "driver": "llvmpipe",
+      "driver_info": "Mesa 25.2.8-0ubuntu0.24.04.2 (LLVM 20.1.2)",
+      "name": "llvmpipe (LLVM 20.1.2, 128 bits)",
+      "vendor": 65541
+    }
+  ],
+  "adapters_with_surface_support": [
+    {
+      "backend": "Vulkan",
+      "device": 0,
+      "device_type": "Cpu",
+      "driver": "llvmpipe",
+      "driver_info": "Mesa 25.2.8-0ubuntu0.24.04.2 (LLVM 20.1.2)",
+      "is_surface_supported": true,
+      "name": "llvmpipe (LLVM 20.1.2, 128 bits)",
+      "vendor": 65541
+    }
+  ],
+  "backends": {
+    "avoid": "Backends(GL | METAL | DX12)",
+    "effective": "Backends(VULKAN)",
+    "effective_and_enabled": "Backends(VULKAN)",
+    "enabled_features": "Backends(VULKAN | GL)",
+    "requested": "Backends(VULKAN)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": ":99",
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "vulkan",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 0.538,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 16.192,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 16.195,
+      "detail": {
+        "reached": "before-adapter",
+        "requested": "before-adapter"
+      },
+      "name": "gate_reached"
+    }
+  ],
+  "finished_ms": 59.581,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-adapter",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "worker",
+      "duration_ms": 15.367,
+      "end_ms": 16.028,
+      "name": "instance",
+      "start_ms": 0.661,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 15.56,
+      "end_ms": 16.189,
+      "name": "event_loop",
+      "start_ms": 0.629,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 0.859,
+      "end_ms": 17.072,
+      "name": "adapter",
+      "start_ms": 16.213,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 8.917,
+      "end_ms": 25.991,
+      "name": "device",
+      "start_ms": 17.074,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 1.625,
+      "end_ms": 30.106,
+      "name": "abandon_join_and_drop",
+      "start_ms": 28.481,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.442,
+      "end_ms": 30.552,
+      "name": "window",
+      "start_ms": 30.11,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 6.32,
+      "end_ms": 36.875,
+      "name": "instance",
+      "start_ms": 30.555,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.432,
+      "end_ms": 37.312,
+      "name": "surface",
+      "start_ms": 36.879,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.977,
+      "end_ms": 38.291,
+      "name": "adapter",
+      "start_ms": 37.314,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 7.167,
+      "end_ms": 45.46,
+      "name": "device",
+      "start_ms": 38.293,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.752,
+      "end_ms": 51.062,
+      "name": "configure",
+      "start_ms": 50.31,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.485,
+      "end_ms": 51.555,
+      "name": "first_pipeline",
+      "start_ms": 51.07,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 4.198,
+      "end_ms": 55.755,
+      "name": "first_frame_submitted",
+      "start_ms": 51.557,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.676,
+      "end_ms": 56.433,
+      "name": "present",
+      "start_ms": 55.758,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "unix",
+    "os": "linux"
+  },
+  "scenario": "abandon",
+  "selected_adapter": {
+    "backend": "Vulkan",
+    "device": 0,
+    "device_type": "Cpu",
+    "driver": "llvmpipe",
+    "driver_info": "Mesa 25.2.8-0ubuntu0.24.04.2 (LLVM 20.1.2)",
+    "name": "llvmpipe (LLVM 20.1.2, 128 bits)",
+    "vendor": 65541
+  },
+  "status": "completed",
+  "strategy": "worker-device",
+  "wgpu": "30.0.1",
+  "windows": [
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque",
+          "Inherit"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Bgra8Unorm"
+        ],
+        "present_modes": [
+          "Immediate",
+          "Mailbox",
+          "Fifo",
+          "FifoRelaxed"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | TEXTURE_BINDING | STORAGE_BINDING | RENDER_ATTACHMENT | STORAGE_ATOMIC)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 240,
+        "present_mode": "Immediate",
+        "width": 320
+      },
+      "context": "post-abandon",
+      "inner_size": [
+        320,
+        240
+      ],
+      "is_surface_supported": true,
+      "mode": "ordinary-after-abandon",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            76,
+            255
+          ]
+        },
+        "rgba_hash": "0cc13b3373f65b25",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 57.34,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "success"
+    }
+  ]
+}

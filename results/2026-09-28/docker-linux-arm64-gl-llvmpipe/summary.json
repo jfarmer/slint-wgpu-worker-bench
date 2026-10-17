@@ -1,0 +1,1513 @@
+{
+  "ok": false,
+  "result": "fail",
+  "sanity": [
+    {
+      "strategy": "ordinary",
+      "variant": "abandon-after-device",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "abandon-before-adapter",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "abandon-before-device",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "failure-empty-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "failure-limits",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "failure-unsupported-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "multi-window",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "repeated",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "single",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "abandon-after-device",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "abandon-before-adapter",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "abandon-before-device",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "failure-empty-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "failure-limits",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "failure-unsupported-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "multi-window",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "repeated",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "single",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "abandon-after-device",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "abandon-before-adapter",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "abandon-before-device",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "failure-empty-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "failure-limits",
+      "ok": false,
+      "problems": [
+        "expected only no-backend errors, got ['device-request-failed']"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "failure-unsupported-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "multi-window",
+      "ok": false,
+      "problems": [
+        "expected only no-backend errors, got ['adapter-not-found', 'surface-unsupported']"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "repeated",
+      "ok": false,
+      "problems": [
+        "expected only no-backend errors, got ['adapter-not-found', 'surface-unsupported']"
+      ]
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "single",
+      "ok": false,
+      "problems": [
+        "expected only no-backend errors, got ['adapter-not-found', 'surface-unsupported']"
+      ]
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "abandon-after-device",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "abandon-before-adapter",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "abandon-before-device",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "failure-empty-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "failure-limits",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "failure-unsupported-mask",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "multi-window",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "repeated",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "single",
+      "ok": true,
+      "problems": []
+    }
+  ],
+  "comparisons": [
+    {
+      "variant": "abandon-after-device",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-device": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-after-device",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-instance": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-after-device",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-after-select": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-adapter",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-device": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-adapter",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-instance": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-adapter",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-after-select": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-device",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-device": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-device",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-instance": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "abandon-before-device",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-after-select": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-empty-mask",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "no-backends"
+          ],
+          "worker-device": [
+            "no-backends"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-empty-mask",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "no-backends"
+          ],
+          "worker-instance": [
+            "no-backends"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-empty-mask",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "no-backends"
+          ],
+          "worker-after-select": [
+            "no-backends"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-limits",
+      "strategy": "worker-device",
+      "verdict": "differ",
+      "differences": [
+        "error_classes"
+      ],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": false,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-device": [
+            "device-request-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-limits",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-instance": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-limits",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-after-select": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-unsupported-mask",
+      "strategy": "worker-device",
+      "verdict": "known-difference",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": false,
+          "ordinary": [
+            "surface-creation-failed"
+          ],
+          "worker-device": [
+            "adapter-not-found"
+          ],
+          "known": "no backend loaded for this mask: surface-first paths fail at surface creation, surface-free selection fails at adapter selection"
+        }
+      }
+    },
+    {
+      "variant": "failure-unsupported-mask",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-creation-failed"
+          ],
+          "worker-instance": [
+            "surface-creation-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "failure-unsupported-mask",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "surface-creation-failed"
+          ],
+          "worker-after-select": [
+            "surface-creation-failed"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "multi-window",
+      "strategy": "worker-device",
+      "verdict": "differ",
+      "differences": [
+        "error_classes"
+      ],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": false,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-device": [
+            "adapter-not-found",
+            "surface-unsupported"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "multi-window",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-instance": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "multi-window",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-after-select": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "repeated",
+      "strategy": "worker-device",
+      "verdict": "differ",
+      "differences": [
+        "error_classes"
+      ],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": false,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-device": [
+            "adapter-not-found",
+            "surface-unsupported"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "repeated",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-instance": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "repeated",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-after-select": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-device",
+      "verdict": "differ",
+      "differences": [
+        "error_classes"
+      ],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-device": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-device": {}
+        },
+        "error_classes": {
+          "equal": false,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-device": [
+            "adapter-not-found",
+            "surface-unsupported"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-instance": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-instance": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-instance": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": null,
+          "worker-after-select": null
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {},
+          "worker-after-select": {}
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [
+            "adapter-not-found"
+          ],
+          "worker-after-select": [
+            "adapter-not-found"
+          ]
+        }
+      }
+    }
+  ]
+}

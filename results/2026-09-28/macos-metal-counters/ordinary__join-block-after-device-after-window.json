@@ -1,0 +1,409 @@
+{
+  "adapters_surface_free": [
+    {
+      "backend": "Metal",
+      "device": 0,
+      "device_type": "IntegratedGpu",
+      "driver": "",
+      "driver_info": "",
+      "name": "Apple M4 Max",
+      "vendor": 0
+    }
+  ],
+  "adapters_with_surface_support": [
+    {
+      "backend": "Metal",
+      "device": 0,
+      "device_type": "IntegratedGpu",
+      "driver": "",
+      "driver_info": "",
+      "is_surface_supported": true,
+      "name": "Apple M4 Max",
+      "vendor": 0
+    }
+  ],
+  "backends": {
+    "avoid": "Backends(GL | DX12)",
+    "dx12_gate_would_prepare": false,
+    "effective": "Backends(NOOP | VULKAN | METAL | BROWSER_WEBGPU)",
+    "effective_and_enabled": "Backends(METAL)",
+    "enabled_features": "Backends(METAL)",
+    "requested": "Backends(NOOP | VULKAN | GL | METAL | DX12 | BROWSER_WEBGPU)",
+    "slint_would_prepare_on_worker": true
+  },
+  "build": {
+    "debug_assertions": false,
+    "dx12_compiler": "Auto",
+    "instance_flags": "InstanceFlags(VALIDATION_INDIRECT_CALL)"
+  },
+  "device_counters": [
+    {
+      "bind_group_layouts": 6,
+      "buffers": 4,
+      "compute_pipelines": 2,
+      "context": "w0",
+      "pipeline_layouts": 2,
+      "render_pipelines": 0,
+      "shader_modules": 2,
+      "thread": "main"
+    }
+  ],
+  "dx12_modules": null,
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": "/var/run/com.apple.launchd.O2OBBDGAYH/org.xquartz:0",
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "SLINT_WGPU_CPU": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "VK_LOADER_DEVICE_SELECT": null,
+    "VK_LOADER_DISABLE_SELECT": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": null,
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_DX12_PRESENTATION_SYSTEM": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WGPU_VALIDATION_INDIRECT_CALL": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 122.547,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 164.408,
+      "detail": {
+        "reason": "no worker starts before the event loop"
+      },
+      "name": "join_block_not_applicable"
+    }
+  ],
+  "finished_ms": 272.895,
+  "harness": "0.1.0",
+  "log": [
+    {
+      "at_ms": 165.286,
+      "level": "DEBUG",
+      "message": "PrivateCapabilities {\n    msl_version: MTLLanguageVersion(\n        262144,\n    ),\n    low_power: false,\n    headless: false,\n    has_unified_memory: Some(\n        true,\n    ),\n    timestamp_query_support: TimestampQuerySupport(\n        STAGE_BOUNDARIES,\n    ),\n    supports_memoryless_storage: true,\n    mesh_shaders: true,\n}",
+      "target": "wgpu_hal::metal",
+      "thread": "main"
+    },
+    {
+      "at_ms": 165.291,
+      "level": "DEBUG",
+      "message": "PrivateTextureFormatCapabilities {\n    read_write_texture_tier: MTLReadWriteTextureTier(\n        2,\n    ),\n    sample_count_mask: TextureFormatCapabilities(\n        MULTISAMPLE_X2 | MULTISAMPLE_X4,\n    ),\n    int64_atomics: true,\n    msaa_desktop: true,\n    msaa_apple3: true,\n    msaa_apple7: true,\n    format_r32float_all: true,\n    format_rgba8_srgb_all: true,\n    format_rgb10a2_uint_write: true,\n    format_rgb10a2_unorm_all: true,\n    format_rg11b10_all: true,\n    format_rg32float_all: true,\n    format_rgba32float_all: true,\n    format_depth16unorm: true,\n    format_depth16unorm_filter: true",
+      "target": "wgpu_hal::metal",
+      "thread": "main"
+    },
+    {
+      "at_ms": 166.231,
+      "level": "DEBUG",
+      "message": "Naga generated shader for entry point 'main' and stage Compute\n// language: metal4.0\n#include <metal_stdlib>\n#include <simd/simd.h>\n\nusing metal::uint;\n\nstruct _mslBufferSizes {\n    uint size1;\n};\n\nstruct type_1 {\n    uint inner[6];\n};\ntypedef uint type_2[1];\nstruct OffsetPc {\n    uint inner;\n};\n\n[[max_total_threads_per_threadgroup(1)]] kernel void main_(\n  device type_1& dst [[buffer(1)]]\n, device type_2 const& src [[buffer(2)]]\n, constant OffsetPc& offset [[buffer(0)]]\n, constant _mslBufferSizes& _buffer_sizes [[buffer(3)]]\n) {\n    bool local = {};\n    bool local_1 = {};\n    uint _e3 = offse",
+      "target": "wgpu_hal::metal::device",
+      "thread": "main"
+    },
+    {
+      "at_ms": 168.03,
+      "level": "DEBUG",
+      "message": "Naga generated shader for entry point 'main' and stage Compute\n// language: metal4.0\n#include <metal_stdlib>\n#include <simd/simd.h>\n\nusing metal::uint;\n\nstruct _mslBufferSizes {\n    uint size1;\n    uint size2;\n    uint size3;\n};\n\nstruct MetadataEntry {\n    uint src_offset;\n    uint dst_offset;\n    uint vertex_or_index_limit;\n    uint instance_limit;\n};\nstruct MetadataRange {\n    uint start;\n    uint count;\n};\ntypedef MetadataEntry type_2[1];\ntypedef uint type_3[1];\nconstant uint OFFSET_MASK = 1073741823u;\nconstant bool supports_indirect_first_instance = true;\nconstant bool write_d3d12_special_",
+      "target": "wgpu_hal::metal::device",
+      "thread": "main"
+    },
+    {
+      "at_ms": 168.398,
+      "level": "DEBUG",
+      "message": "PrivateCapabilities {\n    msl_version: MTLLanguageVersion(\n        262144,\n    ),\n    low_power: false,\n    headless: false,\n    has_unified_memory: Some(\n        true,\n    ),\n    timestamp_query_support: TimestampQuerySupport(\n        STAGE_BOUNDARIES,\n    ),\n    supports_memoryless_storage: true,\n    mesh_shaders: true,\n}",
+      "target": "wgpu_hal::metal",
+      "thread": "main"
+    },
+    {
+      "at_ms": 168.401,
+      "level": "DEBUG",
+      "message": "PrivateTextureFormatCapabilities {\n    read_write_texture_tier: MTLReadWriteTextureTier(\n        2,\n    ),\n    sample_count_mask: TextureFormatCapabilities(\n        MULTISAMPLE_X2 | MULTISAMPLE_X4,\n    ),\n    int64_atomics: true,\n    msaa_desktop: true,\n    msaa_apple3: true,\n    msaa_apple7: true,\n    format_r32float_all: true,\n    format_rgba8_srgb_all: true,\n    format_rgb10a2_uint_write: true,\n    format_rgb10a2_unorm_all: true,\n    format_rg11b10_all: true,\n    format_rg32float_all: true,\n    format_rgba32float_all: true,\n    format_depth16unorm: true,\n    format_depth16unorm_filter: true",
+      "target": "wgpu_hal::metal",
+      "thread": "main"
+    },
+    {
+      "at_ms": 168.418,
+      "level": "DEBUG",
+      "message": "PrivateCapabilities {\n    msl_version: MTLLanguageVersion(\n        262144,\n    ),\n    low_power: false,\n    headless: false,\n    has_unified_memory: Some(\n        true,\n    ),\n    timestamp_query_support: TimestampQuerySupport(\n        STAGE_BOUNDARIES,\n    ),\n    supports_memoryless_storage: true,\n    mesh_shaders: true,\n}",
+      "target": "wgpu_hal::metal",
+      "thread": "main"
+    },
+    {
+      "at_ms": 168.42,
+      "level": "DEBUG",
+      "message": "PrivateTextureFormatCapabilities {\n    read_write_texture_tier: MTLReadWriteTextureTier(\n        2,\n    ),\n    sample_count_mask: TextureFormatCapabilities(\n        MULTISAMPLE_X2 | MULTISAMPLE_X4,\n    ),\n    int64_atomics: true,\n    msaa_desktop: true,\n    msaa_apple3: true,\n    msaa_apple7: true,\n    format_r32float_all: true,\n    format_rgba8_srgb_all: true,\n    format_rgb10a2_uint_write: true,\n    format_rgb10a2_unorm_all: true,\n    format_rg11b10_all: true,\n    format_rg32float_all: true,\n    format_rgba32float_all: true,\n    format_depth16unorm: true,\n    format_depth16unorm_filter: true",
+      "target": "wgpu_hal::metal",
+      "thread": "main"
+    },
+    {
+      "at_ms": 168.457,
+      "level": "DEBUG",
+      "message": "build swapchain SurfaceConfiguration { maximum_frame_latency: 2, present_mode: Fifo, composite_alpha_mode: Opaque, format: Bgra8Unorm, color_space: Srgb, extent: (640, 480, 1), usage: TextureUses(COLOR_TARGET), view_formats: [] }",
+      "target": "wgpu_hal::metal::surface",
+      "thread": "main"
+    },
+    {
+      "at_ms": 168.594,
+      "level": "DEBUG",
+      "message": "Naga generated shader for entry point 'vs' and stage Vertex\n// language: metal4.0\n#include <metal_stdlib>\n#include <simd/simd.h>\n\nusing metal::uint;\n\nstruct type_3 {\n    metal::float2 inner[3];\n};\n\nstruct vsInput {\n};\nstruct vsOutput {\n    metal::float4 member [[position]];\n};\nvertex vsOutput vs(\n  uint i [[vertex_id]]\n) {\n    type_3 p = type_3 {{metal::float2(-0.5, -0.5), metal::float2(0.5, -0.5), metal::float2(0.0, 0.5)}};\n    metal::float2 _e13 = p.inner[metal::min(unsigned(i), 2u)];\n    return vsOutput { metal::float4(_e13, 0.0, 1.0) };\n}\n",
+      "target": "wgpu_hal::metal::device",
+      "thread": "main"
+    },
+    {
+      "at_ms": 168.625,
+      "level": "DEBUG",
+      "message": "Naga generated shader for entry point 'fs' and stage Fragment\n// language: metal4.0\n#include <metal_stdlib>\n#include <simd/simd.h>\n\nusing metal::uint;\n\n\nstruct fsOutput {\n    metal::float4 member [[color(0)]];\n};\nfragment fsOutput fs(\n) {\n    return fsOutput { metal::float4(1.0, 0.5, 0.0, 1.0) };\n}\n",
+      "target": "wgpu_hal::metal::device",
+      "thread": "main"
+    }
+  ],
+  "log_dropped": 0,
+  "options": {
+    "abandon_at": "after-device",
+    "exit_at": "in-device",
+    "failure": "none",
+    "join_at": "after-window",
+    "linger_ms": 300,
+    "on_probe_reject": "continue",
+    "probe": "none",
+    "probe_validation": false,
+    "release_after_ms": 300,
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 101.564,
+      "end_ms": 101.627,
+      "name": "event_loop",
+      "start_ms": 0.064,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 41.849,
+      "end_ms": 164.404,
+      "name": "window",
+      "start_ms": 122.555,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.017,
+      "end_ms": 164.428,
+      "name": "instance",
+      "start_ms": 164.41,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.757,
+      "end_ms": 165.188,
+      "name": "surface",
+      "start_ms": 164.43,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.115,
+      "end_ms": 165.305,
+      "name": "adapter",
+      "start_ms": 165.19,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 3.047,
+      "end_ms": 168.354,
+      "name": "device",
+      "start_ms": 165.307,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.057,
+      "end_ms": 168.501,
+      "name": "configure",
+      "start_ms": 168.444,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.266,
+      "end_ms": 168.773,
+      "name": "first_pipeline",
+      "start_ms": 168.507,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 11.801,
+      "end_ms": 180.576,
+      "name": "first_frame_submitted",
+      "start_ms": 168.775,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.014,
+      "end_ms": 180.594,
+      "name": "present",
+      "start_ms": 180.58,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "unix",
+    "os": "macos"
+  },
+  "scenario": "join-block",
+  "selected_adapter": {
+    "backend": "Metal",
+    "device": 0,
+    "device_type": "IntegratedGpu",
+    "driver": "",
+    "driver_info": "",
+    "name": "Apple M4 Max",
+    "vendor": 0
+  },
+  "selected_device": {
+    "features": "Features { features_wgpu: FeaturesWGPU(SHADER_FLOAT32_ATOMIC | TEXTURE_FORMAT_16BIT_NORM | TEXTURE_COMPRESSION_ASTC_HDR | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | BUFFER_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | MULTIVIEW | TEXTURE_ATOMIC | EXTERNAL_TEXTURE | SHADER_I16 | SHADER_INT64 | SUBGROUP | SUBGROUP_BARRIER | SHADER_INT64_ATOMIC_MIN_MAX | TEXTURE_INT64_ATOMIC | PASSTHROUGH_SHADERS | SHADER_BARYCENTRICS | MULTISAMPLE_ARRAY | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TEXTURE_COMPRESSION_ETC2 | TEXTURE_COMPRESSION_ASTC | TEXTURE_COMPRESSION_ASTC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | SHADER_F16 | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | CLIP_DISTANCES | IMMEDIATES | PRIMITIVE_INDEX) }",
+    "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 29, max_dynamic_storage_buffers_per_pipeline_layout: 29, max_sampled_textures_per_shader_stage: 96, max_samplers_per_shader_stage: 16, max_storage_buffers_per_shader_stage: 29, max_storage_textures_per_shader_stage: 32, max_uniform_buffers_per_shader_stage: 29, max_binding_array_elements_per_shader_stage: 1000000, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 500000, max_uniform_buffer_binding_size: 4294967295, max_storage_buffer_binding_size: 4294967292, max_vertex_buffers: 16, max_buffer_size: 4294967295, max_vertex_attributes: 31, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 64, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 1024, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 256, max_non_sampler_bindings: 4294967295, max_task_workgroup_total_count: 4294967295, max_task_workgroups_per_dimension: 4294967295, max_mesh_workgroup_total_count: 1048576, max_mesh_workgroups_per_dimension: 1048576, max_task_invocations_per_workgroup: 1024, max_task_invocations_per_dimension: 1024, max_mesh_invocations_per_workgroup: 1024, max_mesh_invocations_per_dimension: 1024, max_task_payload_size: 16352, max_mesh_output_vertices: 256, max_mesh_output_primitives: 256, max_mesh_output_layers: 2048, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 268435456, max_blas_geometry_count: 16777216, max_tlas_instance_count: 16777216, max_acceleration_structures_per_shader_stage: 29, max_buffers_and_acceleration_structures_per_shader_stage: 29, max_multiview_view_count: 8, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+  },
+  "status": "completed",
+  "strategy": "ordinary",
+  "wgpu": "30.0.1",
+  "windows": [
+    {
+      "after_present": {
+        "dx12": null,
+        "offscreen": {
+          "format": "Bgra8Unorm",
+          "pixels_rgba": {
+            "center_32_32": [
+              255,
+              128,
+              0,
+              255
+            ],
+            "corner_0_0": [
+              26,
+              51,
+              77,
+              255
+            ],
+            "corner_63_63": [
+              26,
+              51,
+              77,
+              255
+            ],
+            "top_32_4": [
+              26,
+              51,
+              77,
+              255
+            ]
+          },
+          "rgba_hash": "7100ffcd71a3d825",
+          "size": [
+            64,
+            64
+          ]
+        },
+        "offscreen_error": null
+      },
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque",
+          "PostMultiplied"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba16Float",
+          "Rgb10a2Unorm"
+        ],
+        "present_modes": [
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | STORAGE_BINDING | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Fifo",
+        "width": 640
+      },
+      "context": "w0",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "single",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            77,
+            255
+          ]
+        },
+        "rgba_hash": "7100ffcd71a3d825",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 241.634,
+        "attempts": 2,
+        "status": "success"
+      },
+      "present_immediate": "occluded"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "dx12_gate_would_prepare": true,
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "build": {
+    "debug_assertions": false,
+    "dx12_compiler": "Auto",
+    "instance_flags": "InstanceFlags(VALIDATION_INDIRECT_CALL)"
+  },
+  "dx12_compiler": "fxc",
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "SLINT_WGPU_CPU": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "VK_LOADER_DEVICE_SELECT": null,
+    "VK_LOADER_DISABLE_SELECT": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "dx12",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_DX12_PRESENTATION_SYSTEM": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WGPU_VALIDATION_INDIRECT_CALL": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 315.811,
+      "class": "device-request-failed",
+      "context": "w0",
+      "message": "Failed to create device: Limit 'max_bind_groups' value 4294967295 is better than allowed 8",
+      "phase": "device"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 21.028,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 312.094,
+      "detail": {},
+      "name": "worker_spawn"
+    }
+  ],
+  "finished_ms": 466.427,
+  "harness": "0.1.0",
+  "log": [
+    {
+      "at_ms": 287.699,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "main"
+    },
+    {
+      "at_ms": 294.412,
+      "level": "DEBUG",
+      "message": "Using FXC for shader compilation",
+      "target": "wgpu_hal::dx12::instance",
+      "thread": "main"
+    }
+  ],
+  "log_dropped": 0,
+  "options": {
+    "abandon_at": "before-device",
+    "exit_at": "in-device",
+    "failure": "limits",
+    "join_at": "before-event-loop",
+    "linger_ms": 300,
+    "on_probe_reject": "continue",
+    "probe": "none",
+    "probe_validation": false,
+    "release_after_ms": 300,
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 20.782,
+      "end_ms": 21.014,
+      "name": "event_loop",
+      "start_ms": 0.231,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 265.919,
+      "end_ms": 286.974,
+      "name": "window",
+      "start_ms": 21.055,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 7.407,
+      "end_ms": 294.428,
+      "name": "instance",
+      "start_ms": 287.021,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.039,
+      "end_ms": 294.484,
+      "name": "surface",
+      "start_ms": 294.445,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 17.592,
+      "end_ms": 312.087,
+      "name": "adapter",
+      "start_ms": 294.495,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 0.059,
+      "end_ms": 315.61,
+      "name": "device",
+      "start_ms": 315.551,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 3.593,
+      "end_ms": 315.729,
+      "name": "worker_join",
+      "start_ms": 312.136,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "failure",
+  "status": "completed",
+  "strategy": "worker-after-select",
+  "wgpu": "30.0.1",
+  "windows": []
+}

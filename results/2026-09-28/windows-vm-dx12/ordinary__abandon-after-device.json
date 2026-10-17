@@ -1,0 +1,258 @@
+{
+  "adapters_surface_free": [
+    {
+      "backend": "Dx12",
+      "device": 140,
+      "device_type": "Cpu",
+      "driver": "10.0.26100.5074",
+      "driver_info": "",
+      "name": "Microsoft Basic Render Driver",
+      "vendor": 5140
+    }
+  ],
+  "adapters_with_surface_support": [
+    {
+      "backend": "Dx12",
+      "device": 140,
+      "device_type": "Cpu",
+      "driver": "10.0.26100.5074",
+      "driver_info": "",
+      "is_surface_supported": true,
+      "name": "Microsoft Basic Render Driver",
+      "vendor": 5140
+    }
+  ],
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "dx12",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 2.338,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 2.343,
+      "detail": {
+        "reason": "ordinary has no worker"
+      },
+      "name": "abandon_not_applicable"
+    }
+  ],
+  "finished_ms": 94.739,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "after-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 2.127,
+      "end_ms": 2.32,
+      "name": "event_loop",
+      "start_ms": 0.193,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 40.208,
+      "end_ms": 42.58,
+      "name": "window",
+      "start_ms": 2.373,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 6.235,
+      "end_ms": 48.831,
+      "name": "instance",
+      "start_ms": 42.596,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.05,
+      "end_ms": 48.889,
+      "name": "surface",
+      "start_ms": 48.839,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 11.176,
+      "end_ms": 60.072,
+      "name": "adapter",
+      "start_ms": 48.895,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 18.617,
+      "end_ms": 78.7,
+      "name": "device",
+      "start_ms": 60.083,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 1.561,
+      "end_ms": 82.349,
+      "name": "configure",
+      "start_ms": 80.789,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 3.415,
+      "end_ms": 85.786,
+      "name": "first_pipeline",
+      "start_ms": 82.37,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 2.705,
+      "end_ms": 88.493,
+      "name": "first_frame_submitted",
+      "start_ms": 85.788,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.322,
+      "end_ms": 88.819,
+      "name": "present",
+      "start_ms": 88.496,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "abandon",
+  "selected_adapter": {
+    "backend": "Dx12",
+    "device": 140,
+    "device_type": "Cpu",
+    "driver": "10.0.26100.5074",
+    "driver_info": "",
+    "name": "Microsoft Basic Render Driver",
+    "vendor": 5140
+  },
+  "status": "completed",
+  "strategy": "ordinary",
+  "wgpu": "30.0.1",
+  "windows": [
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Rgba8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba8Unorm",
+          "Rgb10a2Unorm",
+          "Rgba16Float"
+        ],
+        "present_modes": [
+          "Mailbox",
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Mailbox",
+        "width": 640
+      },
+      "context": "post-abandon",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "ordinary-after-abandon",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            76,
+            255
+          ]
+        },
+        "rgba_hash": "0cc13b3373f65b25",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 89.098,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "success"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | DX12)",
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(0x0)",
+    "enabled_features": "Backends(METAL)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": "/var/run/com.apple.launchd.O2OBBDGAYH/org.xquartz:0",
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "metal",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 72.519,
+      "class": "adapter-not-found",
+      "context": "w0",
+      "message": "Failed to find an appropriate adapter: No suitable graphics adapter found; noop not requested, vulkan not requested, metal not requested, dx12 support not compiled in, gl not requested, webgpu not requested",
+      "phase": "adapter"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 0.044,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 38.497,
+      "detail": {},
+      "name": "resumed"
+    }
+  ],
+  "finished_ms": 95.171,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "unsupported-mask",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "worker",
+      "duration_ms": 0.011,
+      "end_ms": 0.073,
+      "name": "instance",
+      "start_ms": 0.063,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 0.007,
+      "end_ms": 0.083,
+      "name": "adapter",
+      "start_ms": 0.075,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 27.625,
+      "end_ms": 27.681,
+      "name": "event_loop",
+      "start_ms": 0.056,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 33.994,
+      "end_ms": 72.499,
+      "name": "window",
+      "start_ms": 38.505,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.007,
+      "end_ms": 72.511,
+      "name": "worker_join",
+      "start_ms": 72.504,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "unix",
+    "os": "macos"
+  },
+  "scenario": "failure",
+  "status": "completed",
+  "strategy": "worker-device",
+  "wgpu": "30.0.1",
+  "windows": []
+}

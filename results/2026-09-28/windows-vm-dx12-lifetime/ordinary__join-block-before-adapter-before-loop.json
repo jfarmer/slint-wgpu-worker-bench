@@ -1,0 +1,425 @@
+{
+  "adapters_surface_free": [
+    {
+      "backend": "Dx12",
+      "device": 140,
+      "device_type": "Cpu",
+      "driver": "10.0.26100.5074",
+      "driver_info": "",
+      "name": "Microsoft Basic Render Driver",
+      "vendor": 5140
+    }
+  ],
+  "adapters_with_surface_support": [
+    {
+      "backend": "Dx12",
+      "device": 140,
+      "device_type": "Cpu",
+      "driver": "10.0.26100.5074",
+      "driver_info": "",
+      "is_surface_supported": true,
+      "name": "Microsoft Basic Render Driver",
+      "vendor": 5140
+    }
+  ],
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "dx12_gate_would_prepare": true,
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "build": {
+    "debug_assertions": false,
+    "dx12_compiler": "Auto",
+    "instance_flags": "InstanceFlags(VALIDATION_INDIRECT_CALL)"
+  },
+  "device_counters": [
+    {
+      "bind_group_layouts": 6,
+      "buffers": 4,
+      "compute_pipelines": 2,
+      "context": "w0",
+      "pipeline_layouts": 2,
+      "render_pipelines": 0,
+      "shader_modules": 2,
+      "thread": "main"
+    }
+  ],
+  "dx12_compiler": "fxc",
+  "dx12_modules": {
+    "d3d10warp.dll": {
+      "loaded": "C:\\WINDOWS\\SYSTEM32\\d3d10warp.dll",
+      "search_path": "C:\\WINDOWS\\SYSTEM32\\d3d10warp.dll"
+    },
+    "d3d12.dll": {
+      "loaded": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll",
+      "search_path": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll"
+    },
+    "d3d12core.dll": {
+      "loaded": "C:\\WINDOWS\\SYSTEM32\\D3D12Core.dll",
+      "search_path": "C:\\WINDOWS\\SYSTEM32\\d3d12core.dll"
+    },
+    "d3d12sdklayers.dll": {
+      "loaded": null,
+      "search_path": "C:\\WINDOWS\\SYSTEM32\\d3d12sdklayers.dll"
+    },
+    "d3dcompiler_47.dll": {
+      "loaded": "C:\\WINDOWS\\SYSTEM32\\d3dcompiler_47.dll",
+      "search_path": "C:\\WINDOWS\\SYSTEM32\\d3dcompiler_47.dll"
+    },
+    "dxcompiler.dll": {
+      "loaded": null,
+      "search_path": null
+    },
+    "dxil.dll": {
+      "loaded": null,
+      "search_path": null
+    }
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "SLINT_WGPU_CPU": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "VK_LOADER_DEVICE_SELECT": null,
+    "VK_LOADER_DISABLE_SELECT": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "dx12",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_DX12_PRESENTATION_SYSTEM": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WGPU_VALIDATION_INDIRECT_CALL": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 7.703,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 126.096,
+      "detail": {
+        "reason": "no worker starts before the event loop"
+      },
+      "name": "join_block_not_applicable"
+    }
+  ],
+  "finished_ms": 237.397,
+  "harness": "0.1.0",
+  "log": [
+    {
+      "at_ms": 127.224,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "main"
+    },
+    {
+      "at_ms": 141.606,
+      "level": "DEBUG",
+      "message": "Using FXC for shader compilation",
+      "target": "wgpu_hal::dx12::instance",
+      "thread": "main"
+    },
+    {
+      "at_ms": 162.305,
+      "level": "DEBUG",
+      "message": "Naga generated shader for \"main\" at Compute:\nstruct __dynamic_buffer_offsetsTy1 {\n    uint _0;\n};\nConstantBuffer<__dynamic_buffer_offsetsTy1> __dynamic_buffer_offsets1: register(b1, space1);\n\nstruct OffsetPc {\n    uint inner;\n};\n\nRWByteAddressBuffer dst_ : register(u0);\nByteAddressBuffer src : register(t0);\nConstantBuffer<OffsetPc> offset: register(b0);\n\ntypedef uint ret_Constructarray6_uint_[6];\nret_Constructarray6_uint_ Constructarray6_uint_(uint arg0, uint arg1, uint arg2, uint arg3, uint arg4, uint arg5) {\n    uint ret[6] = { arg0, arg1, arg2, arg3, arg4, arg5 };\n    return ret;\n}\n\n[numthr",
+      "target": "wgpu_hal::dx12::device",
+      "thread": "main"
+    },
+    {
+      "at_ms": 174.949,
+      "level": "DEBUG",
+      "message": "Naga generated shader for \"main\" at Compute:\nstruct __dynamic_buffer_offsetsTy1 {\n    uint _0;\n};\nConstantBuffer<__dynamic_buffer_offsetsTy1> __dynamic_buffer_offsets1: register(b1, space1);\n\nstruct MetadataEntry {\n    uint src_offset;\n    uint dst_offset;\n    uint vertex_or_index_limit;\n    uint instance_limit;\n};\n\nstruct MetadataRange {\n    uint start;\n    uint count;\n};\n\nstatic const uint OFFSET_MASK = 1073741823u;\nstatic const bool supports_indirect_first_instance = true;\nstatic const bool write_d3d12_special_constants = true;\n\nConstantBuffer<MetadataRange> metadata_range: register(b0);\nBy",
+      "target": "wgpu_hal::dx12::device",
+      "thread": "main"
+    },
+    {
+      "at_ms": 204.386,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "main"
+    },
+    {
+      "at_ms": 205.178,
+      "level": "DEBUG",
+      "message": "Using FXC for shader compilation",
+      "target": "wgpu_hal::dx12::instance",
+      "thread": "main"
+    },
+    {
+      "at_ms": 211.44,
+      "level": "DEBUG",
+      "message": "Naga generated shader for \"fs\" at Fragment:\nstruct NagaConstants {\n    int first_vertex;\n    int first_instance;\n    uint other;\n};\nConstantBuffer<NagaConstants> _NagaConstants: register(b0);\n\nfloat4 fs() : SV_Target0\n{\n    return float4(1.0, 0.5, 0.0, 1.0);\n}\n",
+      "target": "wgpu_hal::dx12::device",
+      "thread": "main"
+    },
+    {
+      "at_ms": 213.133,
+      "level": "DEBUG",
+      "message": "Naga generated shader for \"vs\" at Vertex:\nstruct NagaConstants {\n    int first_vertex;\n    int first_instance;\n    uint other;\n};\nConstantBuffer<NagaConstants> _NagaConstants: register(b0);\n\ntypedef float2 ret_Constructarray3_float2_[3];\nret_Constructarray3_float2_ Constructarray3_float2_(float2 arg0, float2 arg1, float2 arg2) {\n    float2 ret[3] = { arg0, arg1, arg2 };\n    return ret;\n}\n\nfloat4 vs(uint i : SV_VertexID) : SV_Position\n{\n    float2 p[3] = Constructarray3_float2_(float2(-0.5, -0.5), float2(0.5, -0.5), float2(0.0, 0.5));\n\n    float2 _e13 = p[min(uint((_NagaConstants.first_vertex +",
+      "target": "wgpu_hal::dx12::device",
+      "thread": "main"
+    }
+  ],
+  "log_dropped": 0,
+  "options": {
+    "abandon_at": "before-adapter",
+    "exit_at": "in-device",
+    "failure": "none",
+    "join_at": "before-event-loop",
+    "linger_ms": 300,
+    "on_probe_reject": "continue",
+    "probe": "none",
+    "probe_validation": false,
+    "release_after_ms": 300,
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 7.237,
+      "end_ms": 7.673,
+      "name": "event_loop",
+      "start_ms": 0.436,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 118.341,
+      "end_ms": 126.074,
+      "name": "window",
+      "start_ms": 7.733,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 15.508,
+      "end_ms": 141.621,
+      "name": "instance",
+      "start_ms": 126.112,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.039,
+      "end_ms": 141.678,
+      "name": "surface",
+      "start_ms": 141.639,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 18.476,
+      "end_ms": 160.158,
+      "name": "adapter",
+      "start_ms": 141.682,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 43.394,
+      "end_ms": 203.56,
+      "name": "device",
+      "start_ms": 160.166,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 4.401,
+      "end_ms": 211.166,
+      "name": "configure",
+      "start_ms": 206.765,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 3.529,
+      "end_ms": 214.712,
+      "name": "first_pipeline",
+      "start_ms": 211.183,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 4.319,
+      "end_ms": 219.034,
+      "name": "first_frame_submitted",
+      "start_ms": 214.715,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.343,
+      "end_ms": 219.386,
+      "name": "present",
+      "start_ms": 219.043,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "join-block",
+  "selected_adapter": {
+    "backend": "Dx12",
+    "device": 140,
+    "device_type": "Cpu",
+    "driver": "10.0.26100.5074",
+    "driver_info": "",
+    "name": "Microsoft Basic Render Driver",
+    "vendor": 5140
+  },
+  "selected_device": {
+    "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+    "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+  },
+  "status": "completed",
+  "strategy": "ordinary",
+  "wgpu": "30.0.1",
+  "windows": [
+    {
+      "after_present": {
+        "dx12": {
+          "debug_device": false,
+          "info_queue": [],
+          "info_queue_stored": null,
+          "removed_reason": "S_OK"
+        },
+        "offscreen": {
+          "format": "Bgra8Unorm",
+          "pixels_rgba": {
+            "center_32_32": [
+              255,
+              128,
+              0,
+              255
+            ],
+            "corner_0_0": [
+              26,
+              51,
+              76,
+              255
+            ],
+            "corner_63_63": [
+              26,
+              51,
+              76,
+              255
+            ],
+            "top_32_4": [
+              26,
+              51,
+              76,
+              255
+            ]
+          },
+          "rgba_hash": "0cc13b3373f65b25",
+          "size": [
+            64,
+            64
+          ]
+        },
+        "offscreen_error": null
+      },
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Rgba8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba8Unorm",
+          "Rgb10a2Unorm",
+          "Rgba16Float"
+        ],
+        "present_modes": [
+          "Mailbox",
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Mailbox",
+        "width": 640
+      },
+      "context": "w0",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "single",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            76,
+            255
+          ]
+        },
+        "rgba_hash": "0cc13b3373f65b25",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 221.443,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "success"
+    }
+  ]
+}

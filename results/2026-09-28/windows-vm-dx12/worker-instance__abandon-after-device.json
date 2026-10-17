@@ -1,0 +1,287 @@
+{
+  "abandon": {
+    "finished_before_timeout": true,
+    "join_ms": 2.803,
+    "reached": "after-device",
+    "requested_at": "after-device",
+    "worker_result_ok": true
+  },
+  "adapters_surface_free": [
+    {
+      "backend": "Dx12",
+      "device": 140,
+      "device_type": "Cpu",
+      "driver": "10.0.26100.5074",
+      "driver_info": "",
+      "name": "Microsoft Basic Render Driver",
+      "vendor": 5140
+    }
+  ],
+  "adapters_with_surface_support": [
+    {
+      "backend": "Dx12",
+      "device": 140,
+      "device_type": "Cpu",
+      "driver": "10.0.26100.5074",
+      "driver_info": "",
+      "is_surface_supported": true,
+      "name": "Microsoft Basic Render Driver",
+      "vendor": 5140
+    }
+  ],
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(DX12)",
+    "effective_and_enabled": "Backends(DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(DX12)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "dx12",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 0.171,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 2.351,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 6.808,
+      "detail": {
+        "reached": "after-device",
+        "requested": "after-device"
+      },
+      "name": "gate_reached"
+    }
+  ],
+  "finished_ms": 83.267,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "after-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 2.13,
+      "end_ms": 2.335,
+      "name": "event_loop",
+      "start_ms": 0.205,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 6.443,
+      "end_ms": 6.784,
+      "name": "instance",
+      "start_ms": 0.341,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.275,
+      "end_ms": 9.614,
+      "name": "abandon_join_and_drop",
+      "start_ms": 9.339,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 29.596,
+      "end_ms": 39.218,
+      "name": "window",
+      "start_ms": 9.622,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 2.361,
+      "end_ms": 41.592,
+      "name": "instance",
+      "start_ms": 39.231,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.045,
+      "end_ms": 41.654,
+      "name": "surface",
+      "start_ms": 41.608,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 10.88,
+      "end_ms": 52.54,
+      "name": "adapter",
+      "start_ms": 41.66,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 17.327,
+      "end_ms": 69.877,
+      "name": "device",
+      "start_ms": 52.549,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 1.407,
+      "end_ms": 72.957,
+      "name": "configure",
+      "start_ms": 71.55,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 3.174,
+      "end_ms": 76.146,
+      "name": "first_pipeline",
+      "start_ms": 72.973,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 2.265,
+      "end_ms": 78.414,
+      "name": "first_frame_submitted",
+      "start_ms": 76.149,
+      "thread": "main"
+    },
+    {
+      "context": "post-abandon",
+      "duration_ms": 0.276,
+      "end_ms": 78.692,
+      "name": "present",
+      "start_ms": 78.416,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "abandon",
+  "selected_adapter": {
+    "backend": "Dx12",
+    "device": 140,
+    "device_type": "Cpu",
+    "driver": "10.0.26100.5074",
+    "driver_info": "",
+    "name": "Microsoft Basic Render Driver",
+    "vendor": 5140
+  },
+  "status": "completed",
+  "strategy": "worker-instance",
+  "wgpu": "30.0.1",
+  "windows": [
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Rgba8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba8Unorm",
+          "Rgb10a2Unorm",
+          "Rgba16Float"
+        ],
+        "present_modes": [
+          "Mailbox",
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Mailbox",
+        "width": 640
+      },
+      "context": "post-abandon",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "ordinary-after-abandon",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            76,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            76,
+            255
+          ]
+        },
+        "rgba_hash": "0cc13b3373f65b25",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 78.947,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "success"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(VULKAN)",
+    "effective_and_enabled": "Backends(VULKAN)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(VULKAN)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "vulkan",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 44.127,
+      "class": "surface-creation-failed",
+      "context": "seq0",
+      "message": "Error creating wgpu window surface: Failed to create surface for any enabled backend: {}",
+      "phase": "surface"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 2.104,
+      "detail": {},
+      "name": "resumed"
+    }
+  ],
+  "finished_ms": 44.431,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 1.929,
+      "end_ms": 2.094,
+      "name": "event_loop",
+      "start_ms": 0.164,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 34.37,
+      "end_ms": 36.484,
+      "name": "window",
+      "start_ms": 2.114,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 7.553,
+      "end_ms": 44.054,
+      "name": "instance",
+      "start_ms": 36.501,
+      "thread": "main"
+    },
+    {
+      "context": "seq0",
+      "duration_ms": 0.023,
+      "end_ms": 44.082,
+      "name": "surface",
+      "start_ms": 44.059,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "multi-window",
+  "status": "completed",
+  "strategy": "ordinary",
+  "wgpu": "30.0.1",
+  "windows": []
+}

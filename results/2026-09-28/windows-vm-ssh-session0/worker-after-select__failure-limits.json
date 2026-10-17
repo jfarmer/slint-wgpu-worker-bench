@@ -1,0 +1,130 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(NOOP | VULKAN | DX12 | BROWSER_WEBGPU)",
+    "effective_and_enabled": "Backends(VULKAN | DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(NOOP | VULKAN | GL | METAL | DX12 | BROWSER_WEBGPU)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": null,
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 35.303,
+      "class": "device-request-failed",
+      "context": "w0",
+      "message": "Failed to create device: Limit 'max_bind_groups' value 4294967295 is better than allowed 8",
+      "phase": "device"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 0.339,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 35.024,
+      "detail": {},
+      "name": "worker_spawn"
+    }
+  ],
+  "finished_ms": 37.33,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "limits",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 0.171,
+      "end_ms": 0.326,
+      "name": "event_loop",
+      "start_ms": 0.155,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 17.309,
+      "end_ms": 17.658,
+      "name": "window",
+      "start_ms": 0.349,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 8.395,
+      "end_ms": 26.066,
+      "name": "instance",
+      "start_ms": 17.671,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.039,
+      "end_ms": 26.112,
+      "name": "surface",
+      "start_ms": 26.072,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 8.898,
+      "end_ms": 35.015,
+      "name": "adapter",
+      "start_ms": 26.116,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 0.023,
+      "end_ms": 35.201,
+      "name": "device",
+      "start_ms": 35.178,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.202,
+      "end_ms": 35.254,
+      "name": "worker_join",
+      "start_ms": 35.052,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "failure",
+  "status": "completed",
+  "strategy": "worker-after-select",
+  "wgpu": "30.0.1",
+  "windows": []
+}

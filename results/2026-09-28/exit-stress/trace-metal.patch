@@ -1,0 +1,46 @@
+diff --git a/internal/backends/winit/wgpu_device.rs b/internal/backends/winit/wgpu_device.rs
+index ae4fd44e1..c780e5123 100644
+--- a/internal/backends/winit/wgpu_device.rs
++++ b/internal/backends/winit/wgpu_device.rs
+@@ -23,11 +23,21 @@ struct Task {
+ fn spawn_task(prepare: impl FnOnce() -> DeviceResult + Send + 'static) -> std::io::Result<Task> {
+     let (claim, claimed) = mpsc::channel();
+     let thread = std::thread::Builder::new().name("slint-wgpu-device".into()).spawn(move || {
++        if let Some(max) = std::env::var("SLINT_TRACE_WORKER_DELAY_MAX_MS").ok().and_then(|v| v.parse::<u64>().ok()) {
++            let nanos = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().subsec_nanos() as u64;
++            let min = std::env::var("SLINT_TRACE_WORKER_DELAY_MIN_MS").ok().and_then(|v| v.parse::<u64>().ok()).unwrap_or(0).min(max);
++            let delay = min + nanos % (max - min + 1);
++            eprintln!("slint-wgpu-trace: worker delay_ms={delay}");
++            std::thread::sleep(std::time::Duration::from_millis(delay));
++        }
++        eprintln!("slint-wgpu-trace: worker preparing");
+         let result = objc2::rc::autoreleasepool(|_| prepare());
++        eprintln!("slint-wgpu-trace: worker finished ok={}", result.is_ok());
+         if claimed.recv().is_ok() {
+             return Some(result);
+         }
+         objc2::rc::autoreleasepool(|_| drop(result));
++        eprintln!("slint-wgpu-trace: worker destroyed unclaimed result");
+         None
+     })?;
+     Ok(Task { claim, thread })
+@@ -52,6 +62,7 @@ pub fn start(
+         if backends & wgpu::Instance::enabled_backend_features() != wgpu::Backends::METAL {
+             return Self::default();
+         }
++        eprintln!("slint-wgpu-trace: worker spawned backends={backends:?}");
+         Self::from_spawn_result(spawn_task(move || wgpu_30::prepare_default_metal_device(backends)))
+     }
+ 
+@@ -66,7 +77,10 @@ pub fn take(&self) -> Option<DeviceResult> {
+     }
+ 
+     pub fn discard(&self) {
+-        drop(self.task.take());
++        if let Some(task) = self.task.take() {
++            eprintln!("slint-wgpu-trace: released");
++            drop(task);
++        }
+     }
+ }
+ 

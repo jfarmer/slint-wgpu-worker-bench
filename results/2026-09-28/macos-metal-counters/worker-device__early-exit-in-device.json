@@ -1,0 +1,118 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | DX12)",
+    "dx12_gate_would_prepare": false,
+    "effective": "Backends(NOOP | VULKAN | METAL | BROWSER_WEBGPU)",
+    "effective_and_enabled": "Backends(METAL)",
+    "enabled_features": "Backends(METAL)",
+    "requested": "Backends(NOOP | VULKAN | GL | METAL | DX12 | BROWSER_WEBGPU)",
+    "slint_would_prepare_on_worker": true
+  },
+  "build": {
+    "debug_assertions": false,
+    "dx12_compiler": "Auto",
+    "instance_flags": "InstanceFlags(VALIDATION_INDIRECT_CALL)"
+  },
+  "early_exit": {
+    "has_worker": true,
+    "requested": "in-device",
+    "stage_after_first_write": "in-device",
+    "stage_at_decision": "in-device"
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": "/var/run/com.apple.launchd.O2OBBDGAYH/org.xquartz:0",
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "SLINT_WGPU_CPU": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "VK_LOADER_DEVICE_SELECT": null,
+    "VK_LOADER_DISABLE_SELECT": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": null,
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_DX12_PRESENTATION_SYSTEM": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WGPU_VALIDATION_INDIRECT_CALL": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 0.061,
+      "detail": {},
+      "name": "worker_spawn"
+    }
+  ],
+  "finished_ms": 62.042,
+  "harness": "0.1.0",
+  "log": [
+    {
+      "at_ms": 61.785,
+      "level": "DEBUG",
+      "message": "PrivateCapabilities {\n    msl_version: MTLLanguageVersion(\n        262144,\n    ),\n    low_power: false,\n    headless: false,\n    has_unified_memory: Some(\n        true,\n    ),\n    timestamp_query_support: TimestampQuerySupport(\n        STAGE_BOUNDARIES,\n    ),\n    supports_memoryless_storage: true,\n    mesh_shaders: true,\n}",
+      "target": "wgpu_hal::metal",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 61.796,
+      "level": "DEBUG",
+      "message": "PrivateTextureFormatCapabilities {\n    read_write_texture_tier: MTLReadWriteTextureTier(\n        2,\n    ),\n    sample_count_mask: TextureFormatCapabilities(\n        MULTISAMPLE_X2 | MULTISAMPLE_X4,\n    ),\n    int64_atomics: true,\n    msaa_desktop: true,\n    msaa_apple3: true,\n    msaa_apple7: true,\n    format_r32float_all: true,\n    format_rgba8_srgb_all: true,\n    format_rgb10a2_uint_write: true,\n    format_rgb10a2_unorm_all: true,\n    format_rg11b10_all: true,\n    format_rg32float_all: true,\n    format_rgba32float_all: true,\n    format_depth16unorm: true,\n    format_depth16unorm_filter: true",
+      "target": "wgpu_hal::metal",
+      "thread": "slint-wgpu-device"
+    }
+  ],
+  "log_dropped": 0,
+  "options": {
+    "abandon_at": "before-device",
+    "exit_at": "in-device",
+    "failure": "none",
+    "join_at": "before-event-loop",
+    "linger_ms": 300,
+    "on_probe_reject": "continue",
+    "probe": "none",
+    "probe_validation": false,
+    "release_after_ms": 300,
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "worker",
+      "duration_ms": 0.012,
+      "end_ms": 0.12,
+      "name": "instance",
+      "start_ms": 0.108,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 61.71,
+      "end_ms": 61.832,
+      "name": "adapter",
+      "start_ms": 0.121,
+      "thread": "slint-wgpu-device"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "unix",
+    "os": "macos"
+  },
+  "scenario": "early-exit",
+  "status": "early-exit",
+  "strategy": "worker-device",
+  "wgpu": "30.0.1",
+  "windows": []
+}

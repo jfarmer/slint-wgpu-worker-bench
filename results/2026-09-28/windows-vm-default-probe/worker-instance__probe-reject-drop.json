@@ -1,0 +1,261 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "dx12_gate_would_prepare": false,
+    "effective": "Backends(NOOP | VULKAN | DX12 | BROWSER_WEBGPU)",
+    "effective_and_enabled": "Backends(VULKAN | DX12)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(NOOP | VULKAN | GL | METAL | DX12 | BROWSER_WEBGPU)",
+    "slint_would_prepare_on_worker": false
+  },
+  "build": {
+    "debug_assertions": false,
+    "dx12_compiler": "Auto",
+    "instance_flags": "InstanceFlags(VALIDATION_INDIRECT_CALL)"
+  },
+  "dx12_compiler": "fxc",
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "SLINT_WGPU_CPU": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "VK_LOADER_DEVICE_SELECT": null,
+    "VK_LOADER_DISABLE_SELECT": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": null,
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_DX12_PRESENTATION_SYSTEM": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WGPU_VALIDATION_INDIRECT_CALL": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 0.384,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 59.552,
+      "detail": {
+        "on_reject": "drop",
+        "worker_stage": "finished"
+      },
+      "name": "probe_rejected"
+    },
+    {
+      "at_ms": 62.162,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 156.613,
+      "detail": {},
+      "name": "gpu_skipped"
+    }
+  ],
+  "finished_ms": 458.886,
+  "gpu_skipped": true,
+  "harness": "0.1.0",
+  "log": [
+    {
+      "at_ms": 12.639,
+      "level": "DEBUG",
+      "message": "Unable to find extension: VK_KHR_surface",
+      "target": "wgpu_hal::vulkan::instance",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 12.641,
+      "level": "DEBUG",
+      "message": "Unable to find extension: VK_KHR_win32_surface",
+      "target": "wgpu_hal::vulkan::instance",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 12.657,
+      "level": "DEBUG",
+      "message": "Unable to find extension: VK_EXT_swapchain_colorspace",
+      "target": "wgpu_hal::vulkan::instance",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 12.658,
+      "level": "DEBUG",
+      "message": "Unable to find extension: VK_KHR_get_physical_device_properties2",
+      "target": "wgpu_hal::vulkan::instance",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 14.506,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 16.422,
+      "level": "DEBUG",
+      "message": "Unable to find extension: VK_KHR_surface",
+      "target": "wgpu_hal::vulkan::instance",
+      "thread": "main"
+    },
+    {
+      "at_ms": 16.424,
+      "level": "DEBUG",
+      "message": "Unable to find extension: VK_KHR_win32_surface",
+      "target": "wgpu_hal::vulkan::instance",
+      "thread": "main"
+    },
+    {
+      "at_ms": 16.425,
+      "level": "DEBUG",
+      "message": "Unable to find extension: VK_EXT_swapchain_colorspace",
+      "target": "wgpu_hal::vulkan::instance",
+      "thread": "main"
+    },
+    {
+      "at_ms": 16.426,
+      "level": "DEBUG",
+      "message": "Unable to find extension: VK_KHR_get_physical_device_properties2",
+      "target": "wgpu_hal::vulkan::instance",
+      "thread": "main"
+    },
+    {
+      "at_ms": 17.808,
+      "level": "DEBUG",
+      "message": "Using FXC for shader compilation",
+      "target": "wgpu_hal::dx12::instance",
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "at_ms": 18.508,
+      "level": "DEBUG",
+      "message": "No D3D12 Agility SDK configuration provided; using system D3D12 runtime",
+      "target": "wgpu_hal::dx12::device_creation",
+      "thread": "main"
+    },
+    {
+      "at_ms": 19.014,
+      "level": "DEBUG",
+      "message": "Using FXC for shader compilation",
+      "target": "wgpu_hal::dx12::instance",
+      "thread": "main"
+    }
+  ],
+  "log_dropped": 0,
+  "options": {
+    "abandon_at": "before-device",
+    "exit_at": "in-device",
+    "failure": "none",
+    "join_at": "before-event-loop",
+    "linger_ms": 300,
+    "on_probe_reject": "drop",
+    "probe": "concurrent",
+    "probe_validation": false,
+    "release_after_ms": 300,
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 7.392,
+      "end_ms": 7.874,
+      "name": "event_loop",
+      "start_ms": 0.482,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 17.134,
+      "end_ms": 17.82,
+      "name": "instance",
+      "start_ms": 0.686,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 51.597,
+      "end_ms": 59.495,
+      "name": "probe",
+      "start_ms": 7.898,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.014,
+      "end_ms": 59.585,
+      "name": "worker_join",
+      "start_ms": 59.571,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 2.576,
+      "end_ms": 62.142,
+      "name": "drop_pending",
+      "start_ms": 59.566,
+      "thread": "main"
+    },
+    {
+      "context": "stand-in",
+      "duration_ms": 94.417,
+      "end_ms": 156.595,
+      "name": "window",
+      "start_ms": 62.178,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "prepared_release": {
+    "had_device": false,
+    "had_worker": true,
+    "join_and_drop_ms": 2.592,
+    "released_at_ms": 62.149,
+    "when": "probe-rejection",
+    "worker_stage_before": "finished"
+  },
+  "probe": {
+    "adapters": [
+      {
+        "backend": "Dx12",
+        "device_type": "Cpu",
+        "name": "Microsoft Basic Render Driver"
+      }
+    ],
+    "any_gpu": false,
+    "forced_validation": false,
+    "instance_created": true,
+    "point": "concurrent",
+    "rejected": true,
+    "slint_wgpu_cpu": false,
+    "start_ms": 7.888,
+    "waited_for_stage": "in-instance",
+    "worker_stage_after_probe": "finished",
+    "worker_stage_at_probe": "in-instance"
+  },
+  "scenario": "single",
+  "status": "completed",
+  "strategy": "worker-instance",
+  "wgpu": "30.0.1",
+  "windows": []
+}

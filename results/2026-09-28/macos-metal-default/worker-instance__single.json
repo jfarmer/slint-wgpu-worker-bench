@@ -1,0 +1,262 @@
+{
+  "adapters_surface_free": [
+    {
+      "backend": "Metal",
+      "device": 0,
+      "device_type": "IntegratedGpu",
+      "driver": "",
+      "driver_info": "",
+      "name": "Apple M4 Max",
+      "vendor": 0
+    }
+  ],
+  "adapters_with_surface_support": [
+    {
+      "backend": "Metal",
+      "device": 0,
+      "device_type": "IntegratedGpu",
+      "driver": "",
+      "driver_info": "",
+      "is_surface_supported": true,
+      "name": "Apple M4 Max",
+      "vendor": 0
+    }
+  ],
+  "backends": {
+    "avoid": "Backends(GL | DX12)",
+    "effective": "Backends(NOOP | VULKAN | METAL | BROWSER_WEBGPU)",
+    "effective_and_enabled": "Backends(METAL)",
+    "enabled_features": "Backends(METAL)",
+    "requested": "Backends(NOOP | VULKAN | GL | METAL | DX12 | BROWSER_WEBGPU)",
+    "slint_would_prepare_on_worker": true
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": "/var/run/com.apple.launchd.O2OBBDGAYH/org.xquartz:0",
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": null,
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [],
+  "events": [
+    {
+      "at_ms": 0.044,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 53.19,
+      "detail": {},
+      "name": "resumed"
+    }
+  ],
+  "finished_ms": 181.77,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "worker",
+      "duration_ms": 0.018,
+      "end_ms": 0.084,
+      "name": "instance",
+      "start_ms": 0.066,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 36.619,
+      "end_ms": 36.678,
+      "name": "event_loop",
+      "start_ms": 0.059,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 40.439,
+      "end_ms": 93.638,
+      "name": "window",
+      "start_ms": 53.199,
+      "thread": "main"
+    },
+    {
+      "context": "main",
+      "duration_ms": 0.007,
+      "end_ms": 93.65,
+      "name": "worker_join",
+      "start_ms": 93.643,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.687,
+      "end_ms": 94.339,
+      "name": "surface",
+      "start_ms": 93.652,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.082,
+      "end_ms": 94.424,
+      "name": "adapter",
+      "start_ms": 94.343,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 2.859,
+      "end_ms": 97.285,
+      "name": "device",
+      "start_ms": 94.426,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.054,
+      "end_ms": 97.408,
+      "name": "configure",
+      "start_ms": 97.354,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.249,
+      "end_ms": 97.663,
+      "name": "first_pipeline",
+      "start_ms": 97.414,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 10.295,
+      "end_ms": 107.961,
+      "name": "first_frame_submitted",
+      "start_ms": 97.665,
+      "thread": "main"
+    },
+    {
+      "context": "w0",
+      "duration_ms": 0.015,
+      "end_ms": 107.979,
+      "name": "present",
+      "start_ms": 107.964,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "unix",
+    "os": "macos"
+  },
+  "scenario": "single",
+  "selected_adapter": {
+    "backend": "Metal",
+    "device": 0,
+    "device_type": "IntegratedGpu",
+    "driver": "",
+    "driver_info": "",
+    "name": "Apple M4 Max",
+    "vendor": 0
+  },
+  "status": "completed",
+  "strategy": "worker-instance",
+  "wgpu": "30.0.1",
+  "windows": [
+    {
+      "capabilities": {
+        "alpha_modes": [
+          "Opaque",
+          "PostMultiplied"
+        ],
+        "formats": [
+          "Bgra8UnormSrgb",
+          "Bgra8Unorm",
+          "Rgba16Float",
+          "Rgb10a2Unorm"
+        ],
+        "present_modes": [
+          "Fifo",
+          "Immediate"
+        ],
+        "usages": "TextureUsages(COPY_SRC | COPY_DST | STORAGE_BINDING | RENDER_ATTACHMENT)"
+      },
+      "configured": {
+        "accepted": true,
+        "alpha_mode": "Opaque",
+        "desired_maximum_frame_latency": 2,
+        "format": "Bgra8Unorm",
+        "height": 480,
+        "present_mode": "Fifo",
+        "width": 640
+      },
+      "context": "w0",
+      "inner_size": [
+        640,
+        480
+      ],
+      "is_surface_supported": true,
+      "mode": "single",
+      "offscreen": {
+        "format": "Bgra8Unorm",
+        "pixels_rgba": {
+          "center_32_32": [
+            255,
+            128,
+            0,
+            255
+          ],
+          "corner_0_0": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "corner_63_63": [
+            26,
+            51,
+            77,
+            255
+          ],
+          "top_32_4": [
+            26,
+            51,
+            77,
+            255
+          ]
+        },
+        "rgba_hash": "7100ffcd71a3d825",
+        "size": [
+          64,
+          64
+        ]
+      },
+      "present_deferred": {
+        "at_ms": 152.27,
+        "attempts": 1,
+        "status": "success"
+      },
+      "present_immediate": "occluded"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[package]
+name = "slint-wgpu-worker-bench"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+description = "Behavioral harness comparing ordinary and worker-thread WGPU device preparation as Slint does it"
+
+[dependencies]
+wgpu = { version = "=30.0.1", features = ["counters"] }
+log = { version = "0.4", features = ["std"] }
+winit = "=0.30.13"
+raw-window-handle = "0.6"
+pollster = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[target.'cfg(windows)'.dependencies]
+# The version wgpu-hal 30.0.1 uses, so its raw DX12 device can be queried directly.
+windows = { version = "=0.62.2", features = ["Win32_Graphics_Direct3D12"] }
+
+[target.'cfg(target_vendor = "apple")'.dependencies]
+objc2 = "0.6.3"
+
+[profile.dev]
+opt-level = 1

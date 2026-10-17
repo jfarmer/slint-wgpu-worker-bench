@@ -1,0 +1,84 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL)",
+    "effective": "Backends(0x0)",
+    "effective_and_enabled": "Backends(0x0)",
+    "enabled_features": "Backends(VULKAN | GL | DX12)",
+    "requested": "Backends(0x0)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": null,
+    "GALLIUM_DRIVER": null,
+    "LIBGL_ALWAYS_SOFTWARE": null,
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": null,
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 0.431,
+      "class": "no-backends",
+      "context": "main",
+      "message": "The requested graphics API (None) is not supported under wgpu on this platform",
+      "phase": "backends"
+    },
+    {
+      "at_ms": 60001.53,
+      "class": "timeout",
+      "context": "",
+      "message": "timed out after 60s during main/event_loop on main",
+      "phase": "watchdog"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 0.384,
+      "detail": {},
+      "name": "resumed"
+    }
+  ],
+  "finished_ms": 60001.539,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "empty-mask",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "main",
+      "duration_ms": 0.194,
+      "end_ms": 0.374,
+      "name": "event_loop",
+      "start_ms": 0.18,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "windows",
+    "os": "windows"
+  },
+  "scenario": "failure",
+  "status": "watchdog-timeout",
+  "strategy": "worker-after-select",
+  "wgpu": "30.0.1",
+  "windows": []
+}

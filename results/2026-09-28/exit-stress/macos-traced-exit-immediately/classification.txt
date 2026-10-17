@@ -1,0 +1,2 @@
+ 197 finished-before-release destroyed_line=0 exit_code=0
+   3 finished-before-release destroyed_line=1 exit_code=0

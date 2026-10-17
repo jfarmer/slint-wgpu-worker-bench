@@ -1,0 +1,686 @@
+{
+  "ok": true,
+  "result": "pass",
+  "sanity": [
+    {
+      "strategy": "ordinary",
+      "variant": "multi-window",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "ordinary",
+      "variant": "single",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "multi-window",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-after-select",
+      "variant": "single",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "multi-window",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-device",
+      "variant": "single",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "multi-window",
+      "ok": true,
+      "problems": []
+    },
+    {
+      "strategy": "worker-instance",
+      "variant": "single",
+      "ok": true,
+      "problems": []
+    }
+  ],
+  "comparisons": [
+    {
+      "variant": "multi-window",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-device": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "device": {
+          "equal": true,
+          "ordinary": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          },
+          "worker-device": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          }
+        },
+        "adapter_order": {
+          "equal": true,
+          "ordinary": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ],
+          "worker-device": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ]
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          },
+          "worker-device": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          },
+          "worker-device": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          },
+          "worker-device": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "success",
+            "seq1": "success",
+            "sim0": "success",
+            "sim1": "success"
+          },
+          "worker-device": {
+            "seq0": "success",
+            "seq1": "success",
+            "sim0": "success",
+            "sim1": "success"
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [],
+          "worker-device": []
+        }
+      }
+    },
+    {
+      "variant": "multi-window",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-instance": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "device": {
+          "equal": true,
+          "ordinary": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          },
+          "worker-instance": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          }
+        },
+        "adapter_order": {
+          "equal": true,
+          "ordinary": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ],
+          "worker-instance": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ]
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          },
+          "worker-instance": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          },
+          "worker-instance": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          },
+          "worker-instance": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "success",
+            "seq1": "success",
+            "sim0": "success",
+            "sim1": "success"
+          },
+          "worker-instance": {
+            "seq0": "success",
+            "seq1": "success",
+            "sim0": "success",
+            "sim1": "success"
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [],
+          "worker-instance": []
+        }
+      }
+    },
+    {
+      "variant": "multi-window",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-after-select": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "device": {
+          "equal": true,
+          "ordinary": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          },
+          "worker-after-select": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          }
+        },
+        "adapter_order": {
+          "equal": true,
+          "ordinary": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ],
+          "worker-after-select": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ]
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          },
+          "worker-after-select": {
+            "seq0": "Bgra8Unorm",
+            "seq1": "Bgra8Unorm",
+            "sim0": "Bgra8Unorm",
+            "sim1": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          },
+          "worker-after-select": {
+            "seq0": "Mailbox",
+            "seq1": "Mailbox",
+            "sim0": "Mailbox",
+            "sim1": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          },
+          "worker-after-select": {
+            "seq0": "0cc13b3373f65b25",
+            "seq1": "0cc13b3373f65b25",
+            "sim0": "0cc13b3373f65b25",
+            "sim1": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "seq0": "success",
+            "seq1": "success",
+            "sim0": "success",
+            "sim1": "success"
+          },
+          "worker-after-select": {
+            "seq0": "success",
+            "seq1": "success",
+            "sim0": "success",
+            "sim1": "success"
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [],
+          "worker-after-select": []
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-device",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-device": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-device": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "device": {
+          "equal": true,
+          "ordinary": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          },
+          "worker-device": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          }
+        },
+        "adapter_order": {
+          "equal": true,
+          "ordinary": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ],
+          "worker-device": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ]
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Bgra8Unorm"
+          },
+          "worker-device": {
+            "w0": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Mailbox"
+          },
+          "worker-device": {
+            "w0": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "0cc13b3373f65b25"
+          },
+          "worker-device": {
+            "w0": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "w0": "success"
+          },
+          "worker-device": {
+            "w0": "success"
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [],
+          "worker-device": []
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-instance",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-instance": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-instance": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "device": {
+          "equal": true,
+          "ordinary": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          },
+          "worker-instance": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          }
+        },
+        "adapter_order": {
+          "equal": true,
+          "ordinary": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ],
+          "worker-instance": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ]
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Bgra8Unorm"
+          },
+          "worker-instance": {
+            "w0": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Mailbox"
+          },
+          "worker-instance": {
+            "w0": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "0cc13b3373f65b25"
+          },
+          "worker-instance": {
+            "w0": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "w0": "success"
+          },
+          "worker-instance": {
+            "w0": "success"
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [],
+          "worker-instance": []
+        }
+      }
+    },
+    {
+      "variant": "single",
+      "strategy": "worker-after-select",
+      "verdict": "match",
+      "differences": [],
+      "checks": {
+        "status": {
+          "equal": true,
+          "ordinary": "completed",
+          "worker-after-select": "completed"
+        },
+        "adapter": {
+          "equal": true,
+          "ordinary": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          },
+          "worker-after-select": {
+            "name": "Microsoft Basic Render Driver",
+            "vendor": 5140,
+            "device": 140,
+            "device_type": "Cpu",
+            "backend": "Dx12",
+            "driver": "10.0.26100.5074"
+          }
+        },
+        "device": {
+          "equal": true,
+          "ordinary": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          },
+          "worker-after-select": {
+            "features": "Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | MAPPABLE_PRIMARY_BUFFERS | TEXTURE_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT_COUNT | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | TEXTURE_FORMAT_P010 | EXTERNAL_TEXTURE | PASSTHROUGH_SHADERS | MEMORY_DECORATION_COHERENT), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | FLOAT32_BLENDABLE | DUAL_SOURCE_BLENDING | IMMEDIATES | PRIMITIVE_INDEX) }",
+            "limits": "Limits { max_texture_dimension_1d: 16384, max_texture_dimension_2d: 16384, max_texture_dimension_3d: 2048, max_texture_array_layers: 2048, max_bind_groups: 8, max_bind_groups_plus_vertex_buffers: 24, max_bindings_per_bind_group: 4294967295, max_dynamic_uniform_buffers_per_pipeline_layout: 8, max_dynamic_storage_buffers_per_pipeline_layout: 4, max_sampled_textures_per_shader_stage: 786424, max_samplers_per_shader_stage: 2048, max_storage_buffers_per_shader_stage: 262144, max_storage_textures_per_shader_stage: 262144, max_uniform_buffers_per_shader_stage: 1048576, max_binding_array_elements_per_shader_stage: 1048576, max_binding_array_acceleration_structure_elements_per_shader_stage: 0, max_binding_array_sampler_elements_per_shader_stage: 2048, max_uniform_buffer_binding_size: 65536, max_storage_buffer_binding_size: 2147483644, max_vertex_buffers: 16, max_buffer_size: 2147483647, max_vertex_attributes: 30, max_vertex_buffer_array_stride: 2048, max_inter_stage_shader_variables: 31, min_uniform_buffer_offset_alignment: 256, min_storage_buffer_offset_alignment: 32, max_color_attachments: 8, max_color_attachment_bytes_per_sample: 128, max_compute_workgroup_storage_size: 32768, max_compute_invocations_per_workgroup: 1024, max_compute_workgroup_size_x: 1024, max_compute_workgroup_size_y: 1024, max_compute_workgroup_size_z: 64, max_compute_workgroups_per_dimension: 65535, max_immediate_size: 128, max_non_sampler_bindings: 1000000, max_task_workgroup_total_count: 0, max_task_workgroups_per_dimension: 0, max_mesh_workgroup_total_count: 0, max_mesh_workgroups_per_dimension: 0, max_task_invocations_per_workgroup: 0, max_task_invocations_per_dimension: 0, max_mesh_invocations_per_workgroup: 0, max_mesh_invocations_per_dimension: 0, max_task_payload_size: 0, max_mesh_output_vertices: 0, max_mesh_output_primitives: 0, max_mesh_output_layers: 0, max_mesh_multiview_view_count: 0, max_blas_primitive_count: 0, max_blas_geometry_count: 0, max_tlas_instance_count: 0, max_acceleration_structures_per_shader_stage: 0, max_buffers_and_acceleration_structures_per_shader_stage: 4294967295, max_multiview_view_count: 4, max_ray_dispatch_count: 0, max_ray_recursion_depth: 0 }"
+          }
+        },
+        "adapter_order": {
+          "equal": true,
+          "ordinary": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ],
+          "worker-after-select": [
+            "Microsoft Basic Render Driver (Dx12)"
+          ]
+        },
+        "formats": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Bgra8Unorm"
+          },
+          "worker-after-select": {
+            "w0": "Bgra8Unorm"
+          }
+        },
+        "present_modes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "Mailbox"
+          },
+          "worker-after-select": {
+            "w0": "Mailbox"
+          }
+        },
+        "pixel_hashes": {
+          "equal": true,
+          "ordinary": {
+            "w0": "0cc13b3373f65b25"
+          },
+          "worker-after-select": {
+            "w0": "0cc13b3373f65b25"
+          }
+        },
+        "present": {
+          "equal": true,
+          "ordinary": {
+            "w0": "success"
+          },
+          "worker-after-select": {
+            "w0": "success"
+          }
+        },
+        "error_classes": {
+          "equal": true,
+          "ordinary": [],
+          "worker-after-select": []
+        }
+      }
+    }
+  ]
+}

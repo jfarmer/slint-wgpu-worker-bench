@@ -1,0 +1,177 @@
+# Runs the strategy x scenario matrix on software drivers.
+# Driver setup follows wgpu's CI at the pinned commit:
+# https://github.com/gfx-rs/wgpu/blob/40f4a34ebaf56f9a046231f54125ad046239d3f3/.github/workflows/ci.yml
+# and its actions under .github/actions/ (install-warp, install-mesa).
+# Software drivers can't show physical-GPU behavior or hybrid-GPU routing.
+
+name: matrix
+
+on:
+  workflow_dispatch:
+    inputs:
+      swiftshader:
+        description: "Also build and run SwiftShader (slow)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+env:
+  RUST_TOOLCHAIN: "1.96.0"
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: "1"
+  # Matches the runtime settings in wgpu's CI.
+  LVP_POISON_MEMORY: "true"
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python3 -m unittest discover -s tests -v
+
+  windows-warp:
+    name: Windows WARP (${{ matrix.label }})
+    runs-on: windows-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: default-mask
+            env: ""
+          - label: dx12
+            env: "--env WGPU_BACKEND=dx12"
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install Rust
+        shell: bash
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --no-self-update --profile minimal
+          rustup default "$RUST_TOOLCHAIN"
+      - name: Build
+        run: cargo build --release --locked
+      # wgpu's xtask install-warp: WARP 1.0.16.1 from NuGet, next to the executable.
+      - name: Install WARP
+        shell: bash
+        run: |
+          set -e
+          curl.exe -L --retry 5 https://www.nuget.org/api/v2/package/Microsoft.Direct3D.WARP/1.0.16.1 -o warp.zip
+          mkdir -p warp
+          tar -xf warp.zip -C warp build/native/bin/x64/d3d10warp.dll
+          cp warp/build/native/bin/x64/d3d10warp.dll target/release/
+      - name: Run matrix
+        shell: bash
+        run: |
+          python scripts/run-matrix.py --out "runs/windows-warp-${{ matrix.label }}" \
+            --binary target/release/slint-wgpu-worker-bench.exe ${{ matrix.env }}
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: windows-warp-${{ matrix.label }}
+          path: runs/
+
+  linux:
+    name: Linux ${{ matrix.label }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: vulkan-lavapipe
+            env: "--env WGPU_BACKEND=vulkan"
+          - label: gl-llvmpipe
+            env: "--env WGPU_BACKEND=gl --env LIBGL_ALWAYS_SOFTWARE=1 --env GALLIUM_DRIVER=llvmpipe"
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install X11 and EGL runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends xvfb xauth libx11-xcb1 libxcursor1 \
+            libxrandr2 libxi6 libxkbcommon-x11-0 libegl1 libgl1
+      - name: Install Rust
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --no-self-update --profile minimal
+          rustup default "$RUST_TOOLCHAIN"
+      # wgpu's install-mesa action: Mesa 25.2.7 from gfx-rs/ci-build build26, with a lavapipe ICD.
+      - name: Install Mesa
+        run: |
+          set -e
+          curl -L --retry 5 https://github.com/gfx-rs/ci-build/releases/download/build26/mesa-25.2.7-linux-x86_64.tar.xz -o mesa.tar.xz
+          mkdir mesa
+          tar xpf mesa.tar.xz -C mesa
+          cat <<- EOF > icd.json
+          {
+            "ICD": {
+                "api_version": "1.1.255",
+                "library_path": "$PWD/mesa/lib/x86_64-linux-gnu/libvulkan_lvp.so"
+            },
+            "file_format_version": "1.0.0"
+          }
+          EOF
+          echo "VK_DRIVER_FILES=$PWD/icd.json" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=$PWD/mesa/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH" >> "$GITHUB_ENV"
+          echo "LIBGL_DRIVERS_PATH=$PWD/mesa/lib/x86_64-linux-gnu/dri" >> "$GITHUB_ENV"
+      - name: Build
+        run: cargo build --release --locked
+      - name: Run matrix under Xvfb
+        run: |
+          xvfb-run -a -s "-screen 0 1280x1024x24" python3 scripts/run-matrix.py \
+            --out "runs/linux-${{ matrix.label }}" --binary target/release/slint-wgpu-worker-bench ${{ matrix.env }}
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: linux-${{ matrix.label }}
+          path: runs/
+
+  swiftshader:
+    if: github.event_name == 'workflow_dispatch' && inputs.swiftshader
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      SWIFTSHADER_COMMIT: 1e80438d2b93ef36a7c05f8d2b81233bac0e3d16
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install build and X11 dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends cmake ninja-build xvfb xauth libx11-dev \
+            libxext-dev libx11-xcb1 libxcursor1 libxrandr2 libxi6 libxkbcommon-x11-0
+      - name: Build SwiftShader
+        run: |
+          set -e
+          git clone https://swiftshader.googlesource.com/SwiftShader swiftshader
+          git -C swiftshader checkout "$SWIFTSHADER_COMMIT"
+          cmake -S swiftshader -B swiftshader/build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+            -DSWIFTSHADER_BUILD_TESTS=OFF -DSWIFTSHADER_BUILD_BENCHMARKS=OFF
+          cmake --build swiftshader/build --target vk_swiftshader
+          echo "VK_DRIVER_FILES=$(find "$PWD/swiftshader/build" -name vk_swiftshader_icd.json | head -1)" >> "$GITHUB_ENV"
+      - name: Install Rust
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --no-self-update --profile minimal
+          rustup default "$RUST_TOOLCHAIN"
+      - name: Build
+        run: cargo build --release --locked
+      - name: Run matrix under Xvfb
+        run: |
+          xvfb-run -a -s "-screen 0 1280x1024x24" python3 scripts/run-matrix.py \
+            --out runs/linux-vulkan-swiftshader --binary target/release/slint-wgpu-worker-bench \
+            --env WGPU_BACKEND=vulkan
+      - if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: linux-vulkan-swiftshader
+          path: runs/

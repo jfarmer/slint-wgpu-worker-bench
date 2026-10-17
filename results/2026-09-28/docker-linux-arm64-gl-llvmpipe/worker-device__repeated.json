@@ -1,0 +1,168 @@
+{
+  "backends": {
+    "avoid": "Backends(GL | METAL | DX12)",
+    "effective": "Backends(GL)",
+    "effective_and_enabled": "Backends(GL)",
+    "enabled_features": "Backends(VULKAN | GL)",
+    "requested": "Backends(GL)",
+    "slint_would_prepare_on_worker": false
+  },
+  "env": {
+    "BENCH_TEST_HANG": null,
+    "DISPLAY": ":99",
+    "GALLIUM_DRIVER": "llvmpipe",
+    "LIBGL_ALWAYS_SOFTWARE": "1",
+    "MESA_LOADER_DRIVER_OVERRIDE": null,
+    "SESSIONNAME": null,
+    "VK_DRIVER_FILES": null,
+    "VK_ICD_FILENAMES": null,
+    "WAYLAND_DISPLAY": null,
+    "WGPU_ADAPTER_NAME": null,
+    "WGPU_BACKEND": "gl",
+    "WGPU_DEBUG": null,
+    "WGPU_DX12_COMPILER": null,
+    "WGPU_FORCE_FALLBACK_ADAPTER": null,
+    "WGPU_GLES_MINOR_VERSION": null,
+    "WGPU_GPU_BASED_VALIDATION": null,
+    "WGPU_POWER_PREF": null,
+    "WGPU_VALIDATION": null,
+    "WINIT_UNIX_BACKEND": null
+  },
+  "errors": [
+    {
+      "at_ms": 25.45,
+      "class": "surface-unsupported",
+      "context": "r0",
+      "message": "surface-unsupported: prepared adapter \"llvmpipe (LLVM 20.1.2, 128 bits)\" cannot present to this surface",
+      "phase": "is_surface_supported"
+    },
+    {
+      "at_ms": 25.825,
+      "class": "adapter-not-found",
+      "context": "r0",
+      "message": "Failed to find an appropriate adapter: No suitable graphics adapter found; noop not requested, vulkan not requested, metal not requested, dx12 not requested, gl not compatible with provided surface, webgpu not requested",
+      "phase": "adapter"
+    }
+  ],
+  "events": [
+    {
+      "at_ms": 0.435,
+      "detail": {},
+      "name": "worker_spawn"
+    },
+    {
+      "at_ms": 17.818,
+      "detail": {},
+      "name": "resumed"
+    },
+    {
+      "at_ms": 25.436,
+      "detail": {
+        "context": "r0",
+        "supported": false
+      },
+      "name": "prepared_adapter_surface_check"
+    },
+    {
+      "at_ms": 25.45,
+      "detail": {
+        "context": "r0"
+      },
+      "name": "fallback_to_surface_selection"
+    }
+  ],
+  "finished_ms": 28.236,
+  "harness": "0.1.0",
+  "options": {
+    "abandon_at": "before-device",
+    "failure": "none",
+    "repeat": 3,
+    "timeout_s": 60,
+    "windows": 2
+  },
+  "pending_polls": 0,
+  "phases": [
+    {
+      "context": "worker",
+      "duration_ms": 17.186,
+      "end_ms": 17.753,
+      "name": "instance",
+      "start_ms": 0.567,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 17.287,
+      "end_ms": 17.816,
+      "name": "event_loop",
+      "start_ms": 0.529,
+      "thread": "main"
+    },
+    {
+      "context": "r0",
+      "duration_ms": 0.472,
+      "end_ms": 18.293,
+      "name": "window",
+      "start_ms": 17.821,
+      "thread": "main"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 1.322,
+      "end_ms": 19.081,
+      "name": "adapter",
+      "start_ms": 17.759,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "worker",
+      "duration_ms": 6.274,
+      "end_ms": 25.357,
+      "name": "device",
+      "start_ms": 19.083,
+      "thread": "slint-wgpu-device"
+    },
+    {
+      "context": "main",
+      "duration_ms": 7.122,
+      "end_ms": 25.418,
+      "name": "worker_join",
+      "start_ms": 18.296,
+      "thread": "main"
+    },
+    {
+      "context": "r0",
+      "duration_ms": 0.005,
+      "end_ms": 25.428,
+      "name": "surface",
+      "start_ms": 25.423,
+      "thread": "main"
+    },
+    {
+      "context": "r0",
+      "duration_ms": 0.002,
+      "end_ms": 25.432,
+      "name": "is_surface_supported",
+      "start_ms": 25.43,
+      "thread": "main"
+    },
+    {
+      "context": "r0",
+      "duration_ms": 0.258,
+      "end_ms": 25.816,
+      "name": "adapter",
+      "start_ms": 25.558,
+      "thread": "main"
+    }
+  ],
+  "platform": {
+    "arch": "aarch64",
+    "family": "unix",
+    "os": "linux"
+  },
+  "scenario": "repeated",
+  "status": "completed",
+  "strategy": "worker-device",
+  "wgpu": "30.0.1",
+  "windows": []
+}
